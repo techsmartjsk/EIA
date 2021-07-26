@@ -3,6 +3,8 @@
     padding: 0;
 }
 
-#myNavbar{
-    background: none !important;
+#myVideo{
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
 }
