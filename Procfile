@@ -1,0 +1,1 @@
+web: gunicorn EIAv2.wsgi --log-file-
