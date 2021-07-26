@@ -1,1 +1,1 @@
-web: gunicorn EIAv2.wsgi --log-file-
+web: gunicorn EIAv2.wsgi --log-file -
