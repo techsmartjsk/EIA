@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+  overflow: hidden;
+}
+
 #myNavbar{
     z-index: 99;
 }
