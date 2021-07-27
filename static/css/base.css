@@ -42,13 +42,14 @@
   }
   
   .sidebar-item {
-    display: flex;
+    display: inline;
     justify-content: space-around;
     width: 150px;
     background-color: transparent;
     padding: 10px;
     user-select: none;
     cursor: pointer;
+    margin-left: 5px;
   }
   .sidebar-item .sidebar-title {
     color: #fff;
