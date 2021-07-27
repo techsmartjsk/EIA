@@ -5,3 +5,9 @@ def index(request):
         request,
         'index.html',{}
     )
+
+def maps(request):
+    return render(
+        request,
+        'maps.html',{}
+    )
