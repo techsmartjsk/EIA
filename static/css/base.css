@@ -36,6 +36,7 @@
     flex-direction: column;
     padding: 20px 0;
     border-radius: 2px;
+    overflow-y: scroll;
   }
   .sidebar-container:hover {
     width: 220px;
