@@ -61,3 +61,13 @@
     transition: stroke 0.2s;
     stroke: #d63384;
   }
+
+
+  /* Right Sidebar */
+  .sidebar-content {
+    max-width: 200px;
+    padding: 36px;
+    background-color: black;
+    float:right;
+    height:100%;
+  }
