@@ -39,8 +39,8 @@
 </div>
 
 <div id="sidebar-right" class="sidebar-content">
-    <a id="close" ><i style="font-size:30px; color:white; float:right;"class="fas fa-times"></i></a>
-    <a id="view-text" style="float:right; display:none;" class="btn btn-primary">View Text</a>
+    <button onclick="closeFunction()" id="close" ><i style="font-size:30px; color:white; float:right;"class="fas fa-times"></i></button>
+    <button onclick="appearFunction()"id="view-text" style="float:right; display:none;" class="btn btn-primary">View Text</button>
     <div style="margin-top:30px;">
         <p style="color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates est aspernatur sit amet autem dolore quam facilis explicabo officia doloremque ex perferendis reprehenderit id dignissimos, deserunt labore corporis tenetur expedita.</p>
         <p style="color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates est aspernatur sit amet autem dolore quam facilis explicabo officia doloremque ex perferendis reprehenderit id dignissimos, deserunt labore corporis tenetur expedita.</p>
@@ -54,13 +54,19 @@
 
 <script>
 
-var close = document.getElementById('close');
+function closeFunction(){
 var sidebar_right = document.getElementById('sidebar-right');
 var view_text_btn = document.getElementById('view-text');
 
-if(close.click()){
-    sidebar_right.style.display = "none";
-    view_text_btn.style.display = "block";
+sidebar_right.style.display = "none";
+view_text_btn.style.display = "block";
+}
+function appearFunction(){
+var sidebar_right = document.getElementById('sidebar-right');
+var view_text_btn = document.getElementById('view-text');
+
+sidebar_right.style.display = "block";
+view_text_btn.style.display = "none";
 }
 
 </script>
