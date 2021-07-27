@@ -69,7 +69,8 @@
     max-width: 300px;
     padding: 36px;
     background-color: #252629;
-    float:right;
+    right:0;
+    position: absolute;
     height:100%;
     border-radius: 2px;
   }
