@@ -78,4 +78,18 @@ body{
     height:100%;
     border-radius: 2px;
     overflow-y: scroll;
+    display: none;
   }
+
+
+  #left{
+    vertical-align: center;
+    right: 0;
+    display: inline;
+    font-size: 40 px;
+  }  
+
+  #right{
+    vertical-align: center;
+    font-size: 40 px;
+  }  

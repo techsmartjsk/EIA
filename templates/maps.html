@@ -16,6 +16,7 @@
 {% endblock navigation %}
 
 {% block content %}
+<span id="right" onclick="appearFunction()"><i  class="fas fa-chevron-right"></i></span>
 <div class="sidebar-container">
     <div class="sidebar-item st-1">
         <span class="sidebar-title">Background </span>
@@ -54,6 +55,8 @@
     </div>
 
 </div>
+
+<span id="left" onclick="appearFunction()"><i  class="fas fa-chevron-left"></i></span>
 
 <div id="sidebar-right" class="sidebar-content">
     <span style="float:right;"onclick="closeFunction()" id="close"><i style="font-size:30px; color:white;"class="fas fa-times"></i></span>
