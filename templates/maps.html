@@ -77,22 +77,19 @@
 </video>
 
 <script>
+    function closeFunction(){
+        var sidebar_right = document.getElementById('sidebar-right');
 
-function closeFunction(){
-var sidebar_right = document.getElementById('sidebar-right');
-var view_text_btn = document.getElementById('view-text');
+        sidebar_right.style.display = "none";
+        view_text_btn.style.display = "block";
+    }
+    function appearFunction(){
+        var sidebar_right = document.getElementById('sidebar-right');
+        var view_text_btn = document.getElementById('view-text');
 
-sidebar_right.style.display = "none";
-view_text_btn.style.display = "block";
-}
-function appearFunction(){
-var sidebar_right = document.getElementById('sidebar-right');
-var view_text_btn = document.getElementById('view-text');
-
-sidebar_right.style.display = "block";
-view_text_btn.style.display = "none";
-}
-
+        sidebar_right.style.display = "block";
+        view_text_btn.style.display = "none";
+    }
 </script>
 
 {% endblock content %}
