@@ -16,7 +16,7 @@
 {% endblock navigation %}
 
 {% block content %}
-<span id="right" onclick="RightToggleFunction()"><i id="right-icon" class="fas fa-chevron-right"></i></span>
+<span id="right"><i id="right-icon" class="fas fa-chevron-right"></i></span>
 <div id="sidebar-left" class="sidebar-container">
     <div class="sidebar-item st-1">
         <span class="sidebar-title">Background </span>
@@ -56,7 +56,7 @@
 
 </div>
 
-<span id="left" onclick="ToggleFunction()"><i id="left-icon" class="fas fa-chevron-left"></i></span>
+<span id="left"><i id="left-icon" class="fas fa-chevron-left"></i></span>
 
 <div id="sidebar-right" class="sidebar-content">
     <div style="margin-top:30px;">
@@ -75,10 +75,12 @@
 </video>
 
 <script>
-    function ToggleFunction(){
-        var sidebar_right = document.getElementById('sidebar-right');
-        var left_section = document.getElementById('left');
+    var left_section = document.getElementById('left');
+    var sidebar_right = document.getElementById('sidebar-right');
+    var sidebar_left = document.getElementById('sidebar-left');
+    var right_section = document.getElementById('right');
 
+    left_section.addEventListener("click", function onclick(event) {
         if(sidebar_right.style.display === "none"){
             left_section.style.marginRight = "370px";
             sidebar_right.style.display = "block";
@@ -86,12 +88,9 @@
             left_section.style.marginRight = "30px";
             sidebar_right.style.display = "none";
         }
-    }
+    });
 
-    function RightToggleFunction(){
-        var sidebar_left = document.getElementById('sidebar-left');
-        var right_section = document.getElementById('right');
-
+    right_section.addEventListener("click", function onclick(event) {
         if(sidebar_left.style.display === "none"){
             right_section.style.marginLeft = "170px";
             sidebar_left.style.display = "flex";
@@ -99,7 +98,7 @@
             right_section.style.marginLeft = "30px";
             sidebar_left.style.display = "none";
         }
-    }
+    });
 </script>
 
 {% endblock content %}
