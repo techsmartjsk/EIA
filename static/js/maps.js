@@ -1,4 +1,5 @@
 function ToggleFunction(){
+    alert('Hey!!!');
     if(document.getElementById('sidebar-right').style.display === 'none'){
         document.getElementById('left').style.marginRight = '370px';
         document.getElementById('sidebar-right').style.display = 'block';
@@ -9,7 +10,7 @@ function ToggleFunction(){
 }
 
 function RightToggleFunction(){
-
+    alert('Hey!!!');
     if(document.getElementById('sidebar-left').style.display === 'none'){
         document.getElementById('right').style.marginLeft = '170px';
         document.getElementById('sidebar-left').style.display = 'flex';
