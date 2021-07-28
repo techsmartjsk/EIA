@@ -16,8 +16,8 @@
 {% endblock navigation %}
 
 {% block content %}
-<span id="right" onclick=""><i id="right-icon" class="fas fa-chevron-right"></i></span>
-<div class="sidebar-container">
+<span id="right" onclick="RightToggleFunction()"><i id="right-icon" class="fas fa-chevron-right"></i></span>
+<div id="sidebar-left" class="sidebar-container">
     <div class="sidebar-item st-1">
         <span class="sidebar-title">Background </span>
     </div>
@@ -85,6 +85,19 @@
         }else{
             left_section.style.marginRight = "30px";
             sidebar_right.style.display = "none";
+        }
+    }
+
+    function RightToggleFunction(){
+        var sidebar_left = document.getElementById('sidebar-left');
+        var right_section = document.getElementById('right');
+
+        if(sidebar_left.style.display === "none"){
+            right_section.style.marginRight = "170px";
+            sidebar_left.style.display = "block";
+        }else{
+            right_section.style.marginRight = "30px";
+            sidebar_left.style.display = "none";
         }
     }
 </script>
