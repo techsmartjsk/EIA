@@ -1,5 +1,5 @@
 function ToggleFunction(){
-    if(sidebar_right.style.display == 'none'){
+    if(document.getElementById('sidebar-right').style.display == 'none'){
         document.getElementById('left').style.marginRight = '370px';
         document.getElementById('sidebar-right').style.display = 'block';
     }else{
