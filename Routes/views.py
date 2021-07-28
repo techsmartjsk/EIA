@@ -11,3 +11,9 @@ def maps(request):
         request,
         'maps.html',{}
     )
+
+def about(request):
+    return render(
+        request,
+        'about.html',{}
+    )    
