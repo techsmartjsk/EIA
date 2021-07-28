@@ -77,13 +77,13 @@
 <script>
     function ToggleFunction(){
         var sidebar_right = document.getElementById('sidebar-right');
-        var right_section = document.getElementById('right');
+        var left_section = document.getElementById('left');
 
         if(sidebar_right.style.display === "none"){
-            right_section.style.marginRight = "370px";
+            left_section.style.marginRight = "370px";
             sidebar_right.style.display = "block";
         }else{
-            right_section.style.marginRight = "30px";
+            left_section.style.marginRight = "30px";
             sidebar_right.style.display = "none";
         }
     }
