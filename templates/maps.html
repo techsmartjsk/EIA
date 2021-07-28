@@ -68,37 +68,10 @@
     </div>
 </div>
 
-<button onclick="appearFunction()"id="view-text" style="right:5%; top:10%; display:none; position:absolute;" class="btn btn-primary">View Text</button>
-
 <video style="object-fit:cover;" height="100%" width="100%" autoplay loop muted>
     <source src="https://www.itpenergised.com/wp-content/uploads/2021/04/iStock-987584318.mp4"></source>
 </video>
 
-<script>
-    var left_section = document.getElementById('left');
-    var sidebar_right = document.getElementById('sidebar-right');
-    var sidebar_left = document.getElementById('sidebar-left');
-    var right_section = document.getElementById('right');
-
-    left_section.addEventListener("click", function onclick(event) {
-        if(sidebar_right.style.display === "none"){
-            left_section.style.marginRight = "370px";
-            sidebar_right.style.display = "block";
-        }else{
-            left_section.style.marginRight = "30px";
-            sidebar_right.style.display = "none";
-        }
-    });
-
-    right_section.addEventListener("click", function onclick(event) {
-        if(sidebar_left.style.display === "none"){
-            right_section.style.marginLeft = "170px";
-            sidebar_left.style.display = "flex";
-        }else{
-            right_section.style.marginLeft = "30px";
-            sidebar_left.style.display = "none";
-        }
-    });
-</script>
+<script src="{% static 'js/maps.js' %}" type="text/javascript"></script>
 
 {% endblock content %}
