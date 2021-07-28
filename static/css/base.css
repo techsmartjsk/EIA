@@ -81,6 +81,8 @@ body{
 
 #left{
   margin-right: 370px;
+  right: 0;
+  position: absolute;
 }  
 
 #right{
@@ -90,7 +92,6 @@ body{
 #right-icon{
   font-size: 30px;
   top: 50%;
-  position: absolute;
   border: 2px solid white;
   height: 60px;
   text-align: center;
