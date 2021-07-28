@@ -30,6 +30,10 @@ body{
 
 /* Navigation */
 
+#sidebar-left{
+  display: none;
+}
+
 .sidebar-container {
   position: absolute;
   height: 100%;
