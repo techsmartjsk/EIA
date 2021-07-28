@@ -80,10 +80,7 @@ body{
 
 
 #left{
-  vertical-align: center;
-  right: 0;
-  display: inline;
-  font-size: 40 px;
+  margin-right: 370px;
 }  
 
 #right{
@@ -99,7 +96,22 @@ body{
   text-align: center;
   color: white;
   background: lightblue;
-  padding: 15 px;
+  padding: 12px;
+  width: 60px;
+  border-radius: 60px;
+}
+
+
+#left-icon{
+  font-size: 30px;
+  top: 50%;
+  position: absolute;
+  border: 2px solid white;
+  height: 60px;
+  text-align: center;
+  color: white;
+  background: lightblue;
+  padding: 12px;
   width: 60px;
   border-radius: 60px;
 }
