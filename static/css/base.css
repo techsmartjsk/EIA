@@ -43,6 +43,7 @@ body{
   flex-direction: column;
   padding: 20px 0;
   border-radius: 2px;
+  z-index: 999;
 }
   
 .sidebar-item {
@@ -80,6 +81,7 @@ body{
   height:100%;
   border-radius: 2px;
   overflow-y: scroll;
+  z-index: 999;
 }
 
 #sidebar-right{
@@ -96,6 +98,7 @@ body{
   color: white;
   background: lightblue;
   padding-right: 10px;
+  z-index: 999;
 }  
 
 #right{
@@ -105,7 +108,8 @@ body{
   border-radius: 40px;
   color: white;
   padding-left: 10px;
-  background: lightblue
+  background: lightblue;
+  z-index: 999;
 }  
 
 #right-icon{
