@@ -51,6 +51,7 @@ body{
   width: 150px;
   background-color: transparent;
   padding: 10px;
+  padding-top: 5px !important;
   user-select: none;
   cursor: pointer;
   margin-left: 5px;
