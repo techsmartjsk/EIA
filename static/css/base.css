@@ -93,6 +93,9 @@ body{
   top: 50%;
   position: absolute;
   border-radius: 40px;
+  color: white;
+  background: lightblue;
+  padding-left: 10px;
 }  
 
 #right{
@@ -100,11 +103,13 @@ body{
   top: 50%;
   position: absolute;
   border-radius: 40px;
+  color: white;
+  padding-right: 10px;
+  background: lightblue
 }  
 
 #right-icon{
   font-size: 20px;
-  border: 2px solid white;
   height: 40px;
   text-align: center;
   color: white;
@@ -117,7 +122,6 @@ body{
 
 #left-icon{
   font-size: 20px;
-  border: 2px solid white;
   height: 40px;
   text-align: center;
   color: white;
