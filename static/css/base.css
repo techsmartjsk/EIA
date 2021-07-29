@@ -83,6 +83,10 @@ body{
   overflow-y: scroll;
 }
 
+#sidebar-right{
+  display: none;
+}
+
 
 #left{
   margin-right: 30px;
