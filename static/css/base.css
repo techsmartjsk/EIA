@@ -61,6 +61,7 @@ body{
 .sidebar-item .sidebar-title {
   color: #fff;
   transition: color 0.2s;
+  text-decoration: none;
 }
 .sidebar-item:hover .sidebar-title {
   color: #d63384;
