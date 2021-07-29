@@ -95,7 +95,7 @@ body{
   border-radius: 40px;
   color: white;
   background: lightblue;
-  padding-left: 10px;
+  padding-right: 10px;
 }  
 
 #right{
@@ -104,7 +104,7 @@ body{
   position: absolute;
   border-radius: 40px;
   color: white;
-  padding-right: 10px;
+  padding-left: 10px;
   background: lightblue
 }  
 
