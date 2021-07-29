@@ -1,3 +1,4 @@
+from Routes.models import Contents
 from django.contrib import admin
 
-# Register your models here.
+admin.site.register(Contents);

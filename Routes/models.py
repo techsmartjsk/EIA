@@ -1,3 +1,7 @@
 from django.db import models
+from django.db.models.fields import TextField
 
-# Create your models here.
+class Contents(models.Model):
+    Heading = models.CharField(max_length=50)
+    Content = models.TextField()
+
