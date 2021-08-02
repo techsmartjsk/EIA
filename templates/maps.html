@@ -16,45 +16,14 @@
 {% endblock navigation %}
 
 {% block content %}
+{% for t in titles%}
 <button onclick="RightToggleFunction()" id="right">Menu<i id="right-icon" class="fas fa-chevron-right"></i></button>
 <div id="sidebar-left" class="sidebar-container">
     <div class="sidebar-item st-1">
-        <a href="/contents/Background"class="sidebar-title">Background</a>
+        <a href="/contents/{{ t.name }}"class="sidebar-title">{{ t.heading }}</a>
     </div>
-
-    <div class="sidebar-item mt-4 st-2">
-        <a href="/contents/Purpose" class="sidebar-title">Purpose </a>
-    </div>
-
-    <div class="sidebar-item mt-4 st-2">
-        <a href="/contents/Availability" class="sidebar-title">Availability </a>
-    </div>
-
-    <div class="sidebar-item mt-4 st-2">
-        <a href="/contents/SiteLocation" class="sidebar-title">Site Location </a>
-    </div>
-
-    <div class="sidebar-item mt-4 st-2">
-        <a href="/contents/Description" class="sidebar-title">Description</a>
-    </div>
-
-    <div class="sidebar-item mt-4 st-3">
-        <a href="/contents/Consultation" class="sidebar-title">Consultation </a>
-    </div>
-
-    <div class="sidebar-item mt-4 st-4">
-        <a href="/contents/EIA" class="sidebar-title">EIA </a>
-    </div>
-
-    <div class="sidebar-item mt-4 st-4">
-        <a href="/contents/Benefits" class="sidebar-title">Benefits </a>
-    </div>
-
-    <div class="sidebar-item mt-4 st-4">
-        <a href="/contents/Conclusion " class="sidebar-title">Conclusion </a>
-    </div>
-
 </div>
+{% endfor %}
 
 <button onclick="ToggleFunction()" id="left"><i id="left-icon" class="fas fa-chevron-left"></i>Text</button>
 

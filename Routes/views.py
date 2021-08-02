@@ -8,9 +8,24 @@ def index(request):
     )
 
 def maps(request):
+
+    context={}
+    context['titles'] = [
+        {'name':'Abbreviations','heading':'Abbreviations'},
+        {'name':'Background','heading':'Background'},
+        {'name':'Purpose','heading':'Purpose'},
+        {'name':'Availability','heading':'Availability'},
+        {'name':'SiteLocation','heading':'Site Location and Description'},
+        {'name':'SiteDesign','heading':'Site Selection and Design'},
+        {'name':'Description','heading':'Description'},
+        {'name':'Consultation','heading':'Consultation'},
+        {'name':'EIA','heading':'EIA'},
+        {'name':'Benefits','heading':'Benefits'},
+        {'name':'Conclusion','heading':'Conclusion'}]
+
     return render(
         request,
-        'maps.html',{}
+        'maps.html',context
     )
 
 def about(request):
