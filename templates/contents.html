@@ -71,7 +71,7 @@
 </div>
 {% endif %}
 
-<img id="bgimage" src="{% static 'img/images/'{{ i.Image }} %}">
+<img style="height:100%; width:100%" id="bgimage" src="{% static {{ i.Image }} %}">
 
 {% endfor%}
 
