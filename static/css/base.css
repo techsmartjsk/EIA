@@ -44,6 +44,7 @@ body{
   padding: 20px 0;
   border-radius: 2px;
   z-index: 999;
+  overflow-y: scroll;
 }
   
 .sidebar-item {
