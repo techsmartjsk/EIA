@@ -38,13 +38,12 @@
     </div>
 </div>
 <img style="height:100%; width:100%" id="bgimage" src="/static/img/images/{{ i.image }}">
-
-{% endfor%}
 {% if i.Heading  == "SiteLocation" %}
 <div class="embed-container">
     <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Sallachy NTS - Aviation, Shadow Flicker" src="//itpe.maps.arcgis.com/apps/Embed/index.html?webmap=bcba2734c29145c78e2b6a5ca175d140&extent=-4.8235,58.1149,-4.4783,58.2101&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe>
 </div>
 {% endif %}
+{% endfor%}
 <script src="{% static 'js/maps.js' %}" type="text/javascript"></script>
 
 {% endblock content %}
