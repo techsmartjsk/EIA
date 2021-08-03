@@ -166,7 +166,7 @@ body{
   font-size: 30px;
 }
 
-#nts{
+#eia{
   color: white;
   text-decoration: none;
 }
@@ -194,7 +194,7 @@ body{
   display: flex;
   align-items: center;
   border-radius: 4px;
-  background-color: var(--app-content-secondary-color);
+  background-color: #abbd05;
   position: sticky;
   top: 0;
 }
@@ -204,8 +204,8 @@ body{
   border-radius: 4px;
 }
 .tableView .products-row:hover {
-  box-shadow: var(--filter-shadow);
-  background-color: var(--app-content-secondary-color);
+  box-shadow: grey;
+  background-color: #abbd05;
 }
 .tableView .products-row .cell-more-button {
   display: none;
@@ -213,7 +213,7 @@ body{
 .tableView .product-cell {
   flex: 1;
   padding: 8px 16px;
-  color: var(--app-content-main-color);
+  color: #abbd05;
   font-size: 14px;
   display: flex;
   align-items: center;
