@@ -19,20 +19,21 @@
 {% endblock navigation %}
 
 {% block content %}
-
-<div class="products-area-wrapper tableView">
-    <div class="products-header">
-        <div class="product-cell price">S.No.</div>
-        <div class="product-cell sales">Value</div>
-    </div>
-    {% for i in list%}
-    <a href="/volume/{{ i.id }}">
-        <div class="products-row">
-            <div class="product-cell price">{{ i.id }}</div>
-            <div class="product-cell price">{{ i.heading }}</div>
+<div class="container">
+    <div class="products-area-wrapper tableView">
+        <div class="products-header">
+            <div class="product-cell price">S.No.</div>
+            <div class="product-cell sales">Volume</div>
         </div>
-    </a>
-    {% endfor %}
+        {% for i in list%}
+        <a href="/volume/{{ i.id }}">
+            <div class="products-row">
+                <div class="product-cell price">{{ i.id }}</div>
+                <div class="product-cell price">{{ i.heading }}</div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
         
 {% endblock content %}

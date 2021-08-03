@@ -61,12 +61,12 @@ def EIA(request):
     
     context = {}
 
-    context[list] = [{ 'id': 1,'heading':'Volume1'},
+    context['list'] = [{ 'id': 1,'heading':'Volume1'},
     {'id': 2,'heading':'Volume2'},
     {'id': 3,'heading':'Volume3'},
     {'id': 4,'heading':'Volume4'},
     { 'id': 5,'heading':'Volume5'}]
-    
+
     return render(request,
     'EIA.html',
     context
