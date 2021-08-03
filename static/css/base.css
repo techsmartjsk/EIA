@@ -51,11 +51,12 @@ body{
   justify-content: space-around;
   width: 350px;
   background-color: transparent;
-  padding: 10px;
+  padding: 20px;
   padding-top: 5px !important;
   user-select: none;
   cursor: pointer;
   margin-left: 5px;
+  font-size: large;
 }
 
 .sidebar-item .sidebar-title {
@@ -161,7 +162,7 @@ body{
 }
 
 .nav-link{
-  font-size: large;
+  font-size: 18px;
   font-weight: bold;
 }
 
