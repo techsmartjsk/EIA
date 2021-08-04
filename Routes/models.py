@@ -9,5 +9,6 @@ class Contents(models.Model):
 class Volumes(models.Model):
     name = models.CharField(max_length=50)
     link = models.CharField(max_length=50)
+    volume = models.IntegerField(default=1)
 
 
