@@ -141,7 +141,7 @@ body{
 }
 
 #bgimage{
-    object-fit: cover;
+    object-fit: fill;
     object-position: 50% 50%;
     position: absolute;
 }
