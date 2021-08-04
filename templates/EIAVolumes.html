@@ -32,7 +32,7 @@
     <h2 style="color:white;font-size:30px;">Chapters</h2>
     {% for v in volume_info %}
     <div style="margin-top:30px;">
-        <a href="{{ c.link }}"style="color:white; font-size:20px; text-decoration:none;" download>{{ forloop.counter }}. {{ c.name }}<i style="font-size:25px; margin-left:20px;"class="fas fa-download"></i></a>
+        <a href="{{ v.link }}"style="color:white; font-size:20px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:25px; margin-left:20px;"class="fas fa-download"></i></a>
     </div>
     {% endfor %}
 </div>  
