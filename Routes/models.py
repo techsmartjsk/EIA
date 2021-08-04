@@ -6,3 +6,8 @@ class Contents(models.Model):
     Content = models.TextField()
     image = models.CharField(max_length=50, default="background.png")
 
+class Volumes(models.Model):
+    name = models.CharField(max_length=50)
+    link = models.CharField(max_length=50)
+
+
