@@ -66,7 +66,7 @@ def Volume(request,v_id):
     {'id': 4,'heading':'Volume 4 : LVIA THC Figures'},
     {'id': 5,'heading':'Volume 5 : Appendices'}]
 
-    volume_info = Volumes.objects.filter(volume__contains = v_id)
+    volume_info = Volumes.objects.filter(volume__contains = v_id).order_by('name')
 
     context['volume_info'] = volume_info
 
