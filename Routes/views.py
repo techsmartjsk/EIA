@@ -77,7 +77,7 @@ def EIA(request):
     context
     )
 
-def Volumes(request,v_id):
+def Volume(request,v_id):
     context={}
 
     context['list'] = [{ 'id': 1,'heading':'Volume 1 : Chapters'},
@@ -85,7 +85,7 @@ def Volumes(request,v_id):
     {'id': 3,'heading':'Volume 3 : LVIA NatureScot Figures'},
     {'id': 4,'heading':'Volume 4 : LVIA THC Figures'},
     {'id': 5,'heading':'Volume 5 : Appendices'}]
-    
+
     volume_info = Volumes.objects.filter(volume__contains = v_id)
 
     context['volume_info'] = volume_info

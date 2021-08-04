@@ -7,5 +7,5 @@ urlpatterns = [
     path('about/',views.about,name='about'),
     path('contents/<str:title>',views.contents,name='contents'),
     path('EIA/',views.EIA,name='EIA'),
-    path('volumes/<int:v_id>',views.Volumes,name='Volumes'),
+    path('volumes/<int:v_id>',views.Volume,name='Volumes'),
 ]
