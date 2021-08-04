@@ -1,4 +1,4 @@
-from Routes.models import Contents
+from Routes.models import Contents, Volumes
 from django.shortcuts import render
 
 def index(request):
@@ -61,6 +61,8 @@ def EIA(request):
     
     context = {}
 
+    
+
     context['chapters']= [{'name':'Abbreviations','link':'https://www.dropbox.com/s/jbipsfu9fq9qb4l/Sallachy-WF-Abbreviations.pdf?dl=0'},
     {'name':'Introduction','link':'https://www.dropbox.com/scl/fi/z23j2hdfsi2wn5wbn8vej/Sallachy-WF-Chapter-1-Introduction.docx?dl=0&rlkey=la3pzfz39yswz5ou6htnijtr6'},]
 
@@ -74,3 +76,20 @@ def EIA(request):
     'EIA.html',
     context
     )
+
+def Volumes(request,v_id):
+    context={}
+
+    context['list'] = [{ 'id': 1,'heading':'Volume 1 : Chapters'},
+    {'id': 2,'heading':'Volume 2 : Figures'},
+    {'id': 3,'heading':'Volume 3 : LVIA NatureScot Figures'},
+    {'id': 4,'heading':'Volume 4 : LVIA THC Figures'},
+    {'id': 5,'heading':'Volume 5 : Appendices'}]
+    
+    volume_info = Volumes.objects.filter(volume__contains = v_id)
+
+    context['volume_info'] = volume_info
+
+    return render(request,
+    'EIAVolumes.html',
+    context)
