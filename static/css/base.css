@@ -20,12 +20,13 @@ body{
 }
 
 #Heading{
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     position:absolute;
     top: 30%;
     color: white;
-    text-align: center;
+    margin-left: 10rem;
+    border-left: white;
+    border-left-width: 2rem;
     width: 100%;
 }
 
