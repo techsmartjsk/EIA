@@ -24,9 +24,9 @@ body{
     position:absolute;
     top: 30%;
     color: white;
-    margin-left: 10rem;
+    margin-left: 10vw;
     border-left: white;
-    border-left-width: 2rem;
+    border-left-width: 2vw;
     width: 100%;
 }
 
@@ -166,12 +166,12 @@ body{
 }
 
 .nav-link{
-  font-size: 2.5rem;
-  padding-left: 5rem;
+  font-size: 2.5vw;
+  padding-left: 5vw;
 }
 
 .nav-item{
-  margin-left: 5rem;
+  margin-left: 5vw;
 }
 
 #eia{
