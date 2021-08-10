@@ -169,6 +169,10 @@ body{
   padding-left: 5rem;
 }
 
+.nav-item{
+  margin-left: 5rem;
+}
+
 #eia{
   color: white;
   text-decoration: none;
