@@ -32,8 +32,8 @@
 {% endblock navigation %}
 
 {% block content %}
-<button style="font-size:20px;" onclick="RightToggleFunction()" id="right">Menu<i id="right-icon" class="fas fa-chevron-right"></i></button>
-<div id="sidebar-left" class="sidebar-container">
+<button style="font-size:20px; margin-left:370px;" onclick="RightToggleFunction()" id="right">Menu<i id="right-icon" class="fas fa-chevron-right"></i></button>
+<div id="sidebar-left" style="display:flex;" class="sidebar-container">
 {% for t in titles%}
     <div class="sidebar-item st-1">
         <a href="/contents/{{ t.name }}"class="sidebar-title">{{ t.heading }}</a>
