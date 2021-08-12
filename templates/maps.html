@@ -32,8 +32,8 @@
 {% endblock navigation %}
 
 {% block content %}
-{% comment %} <button onclick="RightToggleFunction()" id="right">Menu<i id="right-icon" class="fas fa-chevron-right"></i></button> {% endcomment %}
-<div id="sidebar-left" class="sidebar-container">
+<button onclick="RightToggleFunction()" id="right">Menu<i id="right-icon" class="fas fa-chevron-right"></i></button>
+<div id="sidebar-left" style="display:block !important;" class="sidebar-container">
 {% for t in titles%}
     <div class="sidebar-item st-1">
         <a href="/contents/{{ t.name }}"class="sidebar-title">{{ t.heading }}</a>
