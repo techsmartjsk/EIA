@@ -48,7 +48,7 @@ body{
 .sidebar-item {
   display: inline;
   justify-content: space-around;
-  width: 350px;
+  width: 35vw;
   background-color: transparent;
   padding: 20px;
   padding-top: 5px !important;
@@ -75,7 +75,7 @@ body{
 
   /* Right Sidebar */
 .sidebar-content {
-  max-width: 700px;
+  max-width: 70vw;
   padding: 36px;
   padding-bottom: 200px !important;
   background-color: #f3f6fd;
@@ -91,7 +91,7 @@ body{
 
 
 #left{
-  margin-right: 730px;
+  margin-right: 73vw;
   right: 0;
   top: 50%;
   position: absolute;
@@ -104,7 +104,7 @@ body{
 }  
 
 #right{
-  margin-left: 370px;
+  margin-left: 37vw;
   top: 50%;
   position: absolute;
   border-radius: 40px;

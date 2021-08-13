@@ -73,3 +73,7 @@ def Volume(request,v_id):
     return render(request,
     'EIAVolumes.html',
     context)
+
+
+def Disclaimer(request):
+    return render(request,'disclaimer.html',{});

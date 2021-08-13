@@ -1,38 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block navigation %}
-<nav id="myNavbar" class="navbar navbar-expand-lg navbar-light bg-transparent">
-  <div class="container-fluid">
-    <a class="navbar-brand"  href="https://www.itpenergised.com" target="_blank"><img src="{% static 'logo2.png' %}" width="250" height="59"></a>
-    <a class="navbar-brand"  href="https://www.wkn-group.com/en/" target="_blank"><img src="{% static 'wkn_logo.png' %}" width="200" height="83"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/maps">NTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/volumes/1">EIA</a>
-        </li>
-        <li  class="nav-item">
-          <a class="nav-link" style="margin-top:6px !important;" target="_blank" href="mailto:info@itpenergised.com"><i style="font-size:2vw;"class="fas fa-envelope"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  style="margin-top:6px !important;" target="_blank" href="https://www.linkedin.com/company/itpenergised/mycompany/"><i style="font-size:2vw;"class="fab fa-linkedin"></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
 {% endblock navigation %}
 
 {% block content %}
-<button style="font-size:20px; margin-left:370px; top:18% !important;" onclick="RightToggleFunction()" id="right">Menu<i id="right-icon" class="fas fa-chevron-right"></i></button>
+<button style="top:18% !important;" onclick="RightToggleFunction()" id="right">Menu<i id="right-icon" class="fas fa-chevron-right"></i></button>
 <div id="sidebar-left" style="display:flex;" class="sidebar-container">
 {% for t in titles%}
     <div class="sidebar-item st-1">
