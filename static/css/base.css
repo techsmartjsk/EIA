@@ -41,7 +41,7 @@ body{
   position: absolute;
   height: 100%;
   width: 350px;
-  background-color: #252629;
+  background-color: #f3f6fd;
   display: flex;
   flex-direction: column;
   padding: 20px 0;
@@ -63,7 +63,7 @@ body{
 }
 
 .sidebar-item .sidebar-title {
-  color: #fff;
+  color: black;
   transition: color 0.2s;
   text-decoration: none;
   font-size: 25px;
@@ -82,7 +82,7 @@ body{
   max-width: 550px;
   padding: 36px;
   padding-bottom: 200px !important;
-  background-color: #252629;
+  background-color: #f3f6fd;
   right:0;
   position: absolute;
   height:100%;
