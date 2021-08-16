@@ -164,11 +164,11 @@ body{
 
 .nav-link{
   font-size: 2vw;
-  padding-left: 5vw;
 }
 
 .nav-item{
   margin-left: 5vw;
+  padding-left: 1vw;
 }
 
 #eia{
