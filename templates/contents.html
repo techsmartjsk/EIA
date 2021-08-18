@@ -15,7 +15,7 @@
 
 {% for i in info %}
 <div id="sidebar-right" class="sidebar-content">
-    <h2 style="color:black;font-size:30px;">{{ i.Heading }}</h2>
+    <h2 style="color:black;font-size:30px;">{{ i.Title }}</h2>
     {{ i.Content | safe }}
 </div>
 <img style="height:100%; width:100%" id="bgimage" src="/static/img/images/{{ i.image }}">
