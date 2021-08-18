@@ -16,9 +16,7 @@
 {% for i in info %}
 <div id="sidebar-right" class="sidebar-content">
     <h2 style="color:black;font-size:30px;">{{ i.Heading }}</h2>
-    <div style="margin-top:30px;">
         {{ i.Content }}
-    </div>
 </div>
 <img style="height:100%; width:100%" id="bgimage" src="/static/img/images/{{ i.image }}">
 {% if i.Heading  == "SiteLocation" %}
