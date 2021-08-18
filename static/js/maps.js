@@ -12,13 +12,13 @@ function RightToggleFunction(){
     if(document.getElementById('sidebar-left').style.display === "none"){
         document.getElementById('right').style.marginLeft = "37vw";
         document.getElementById('sidebar-left').style.display = "flex";
-        document.getElementById('ntsinfo').style.marginLeft = "73vw"
+        document.getElementById('ntsinfo').style.marginLeft = "73vw";
     }else if(document.getElementById('sidebar-left').style.display === "flex"){
         document.getElementById('right').style.marginLeft = "3vw";
         document.getElementById('sidebar-left').style.display = "none";
     }else{
         document.getElementById('right').style.marginLeft = "3vw";
         document.getElementById('sidebar-left').style.display = "none";
-        document.getElementById('ntsinfo').style.marginLeft = "0vw"
+        document.getElementById('ntsinfo').style.marginLeft = "0vw";
     }
 }
