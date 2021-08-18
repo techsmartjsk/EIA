@@ -36,7 +36,7 @@ body{
 .sidebar-container {
   position: absolute;
   height: 100%;
-  width: 350px;
+  width: 27vw;
   background-color: #f3f6fd;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,6 @@ body{
 .sidebar-item {
   display: inline;
   justify-content: space-around;
-  width: 35vw;
   background-color: transparent;
   padding: 20px;
   padding-top: 5px !important;
