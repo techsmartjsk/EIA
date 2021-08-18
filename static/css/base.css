@@ -65,7 +65,7 @@ body{
   font-size: 25px;
 }
 .sidebar-item:hover .sidebar-title {
-  color: rgba(195, 207, 244, 0.5);
+  background-color: rgba(195, 207, 244, 0.5);
 }
 .sidebar-item:hover .sidebar-icon {
   transition: stroke 0.2s;
