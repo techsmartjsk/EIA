@@ -2,9 +2,11 @@ function ToggleFunction(){
     if(document.getElementById('sidebar-right').style.display === "none"){
         document.getElementById('left').style.marginRight = "73vw";
         document.getElementById('sidebar-right').style.display = "block";
+        document.getElementById('ntsinfo').style.marginLeft = "73vw"
     }else{
         document.getElementById('left').style.marginRight = "3vw";
         document.getElementById('sidebar-right').style.display = "none";
+        document.getElementById('ntsinfo').style.marginLeft = "0vw"
     }
 }
 
