@@ -75,7 +75,7 @@ body{
 
   /* Right Sidebar */
 .sidebar-content {
-  max-width: 70vw;
+  max-width: 50vw;
   padding: 36px;
   padding-bottom: 200px !important;
   background-color: #f3f6fd;
@@ -91,7 +91,7 @@ body{
 
 
 #left{
-  margin-right: 73vw;
+  margin-right: 51vw;
   right: 0;
   top: 50%;
   position: absolute;
@@ -133,7 +133,7 @@ body{
   height: 40px;
   text-align: center;
   color: white;
-  background: #abbd05  ;
+  background: rgba(195, 207, 244, 1);
   padding: 9px;
   width: 40px;
   border-radius: 40px;

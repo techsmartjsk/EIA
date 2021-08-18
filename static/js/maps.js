@@ -1,6 +1,6 @@
 function ToggleFunction(){
     if(document.getElementById('sidebar-right').style.display === "none"){
-        document.getElementById('left').style.marginRight = "73vw";
+        document.getElementById('left').style.marginRight = "51vw";
         document.getElementById('sidebar-right').style.display = "block";
     }else{
         document.getElementById('left').style.marginRight = "3vw";
