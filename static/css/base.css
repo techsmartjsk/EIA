@@ -64,7 +64,7 @@ body{
   text-decoration: none;
   font-size: 25px;
 }
-.sidebar-item:hover .sidebar-title {
+.sidebar-item:hover{
   background-color: rgba(195, 207, 244, 0.5);
 }
 .sidebar-item:hover .sidebar-icon {
