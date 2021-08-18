@@ -65,11 +65,11 @@ body{
   font-size: 25px;
 }
 .sidebar-item:hover .sidebar-title {
-  color: #abbd05;
+  color: rgba(195, 207, 244, 0.5);
 }
 .sidebar-item:hover .sidebar-icon {
   transition: stroke 0.2s;
-  stroke: #abbd05;
+  stroke: rgba(195, 207, 244, 0.5);
 }
 
 
@@ -97,8 +97,8 @@ body{
   position: absolute;
   border-radius: 40px;
   color: white;
-  background: #abbd05;
-  border:2px solid #abbd05 ;
+  background: rgba(195, 207, 244, 1)5;
+  border:2px solid rgba(195, 207, 244, 1) ;
   padding-right: 10px;
   z-index: 999;
 }  
@@ -110,8 +110,8 @@ body{
   border-radius: 40px;
   color: white;
   padding-left: 10px;
-  background: #abbd05 ;
-  border:2px solid #abbd05 ;
+  background: rgba(195, 207, 244, 1) ;
+  border:2px solid rgba(195, 207, 244, 1) ;
   z-index: 999;
 }  
 
@@ -120,8 +120,8 @@ body{
   height: 40px;
   text-align: center;
   color: white;
-  background: #abbd05;
-  border:2px solid #abbd05 ;
+  background: rgba(195, 207, 244, 1);
+  border:2px solid rgba(195, 207, 244, 1);
   padding: 9px;
   width: 40px;
   border-radius: 40px;
@@ -137,7 +137,7 @@ body{
   padding: 9px;
   width: 40px;
   border-radius: 40px;
-  border:2px solid #abbd05 ;
+  border:2px solid rgba(195, 207, 244, 1) ;
 }
 
 #bgimage{
@@ -152,13 +152,13 @@ body{
 }
 
 #nts:hover{
-  color: #abbd05;
+  color: rgba(195, 207, 244, 1);
   text-decoration: underline;
 }
 
 
 #nts:active{
-  color: #abbd05;
+  color: rgba(195, 207, 244, 1);
   text-decoration: underline;
 }
 
@@ -173,13 +173,13 @@ body{
 }
 
 #eia:hover{
-  color: #abbd05;
+  color: rgba(195, 207, 244, 1);
   text-decoration: underline;
 }
 
 
 #eia:active{
-  color: #abbd05;
+  color: rgba(195, 207, 244, 1);
   text-decoration: underline;
 }
 
@@ -195,7 +195,7 @@ body{
   display: flex;
   align-items: center;
   border-radius: 4px;
-  background-color: #abbd05;
+  background-color: rgba(195, 207, 244, 1);
   position: sticky;
   top: 0;
 }
@@ -206,7 +206,7 @@ body{
 }
 .tableView .products-row:hover {
   box-shadow: grey;
-  background-color: #abbd05;
+  background-color: rgba(195, 207, 244, 1);
 }
 .tableView .products-row .cell-more-button {
   display: none;
