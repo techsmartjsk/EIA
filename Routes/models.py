@@ -10,7 +10,7 @@ class Contents(models.Model):
     Heading = models.CharField(max_length=50)
     Title = models.CharField(max_length=50,default="Title")
     Content = models.TextField()
-    type = models.CharField(max_length=50,choices=types,default='image')
+    types = models.CharField(max_length=50,choices=types,default='image')
     image = models.CharField(max_length=50, default="background.png")
 
 class Volumes(models.Model):
