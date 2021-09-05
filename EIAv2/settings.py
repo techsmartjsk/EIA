@@ -32,7 +32,7 @@ SECRET_KEY = '_r5hl^-j%0i4*72yabb)1tkkp$plqg^b=8nyxp*hg5dduhbskt'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://eiasprintv2.herokuapp.com',
+    'https://eiasprintv3.herokuapp.com',
     'localhost'
 ]
 
