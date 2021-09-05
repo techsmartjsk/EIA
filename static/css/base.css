@@ -1,12 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 body{
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 #myNavbar{
@@ -162,8 +162,10 @@ body{
   text-decoration: underline;
 }
 
-.nav-link{
+.navigation{
   font-size: 1.5vw;
+  font-family: 'Lato', sans-serif !important;
+  color:white !important;
 }
 
 
