@@ -8,4 +8,4 @@ class ContentsAdmin(SummernoteModelAdmin):
 
 admin.site.register(Contents,ImportExportModelAdmin)
 #admin.site.register(Contents,ContentsAdmin)
-admin.site.register(Volumes)
+admin.site.register(Volumes,ImportExportModelAdmin))
