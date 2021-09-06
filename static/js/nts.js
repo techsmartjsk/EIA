@@ -10,15 +10,13 @@ function ToggleFunction(){
 
 function RightToggleFunction(){
     if(document.getElementById('sidebar-left').style.display === "none"){
-        document.getElementById('right').style.marginLeft = "28vw";
+        document.getElementById('menu_top').style.marginLeft = "block";
         document.getElementById('sidebar-left').style.display = "flex";
-        document.getElementById('ntsinfo').style.marginLeft = "28vw";
     }else if(document.getElementById('sidebar-left').style.display === "flex"){
-        document.getElementById('right').style.marginLeft = "3vw";
-        document.getElementById('ntsinfo').style.marginLeft = "0vw";
+        document.getElementById('menu_top').style.marginLeft = "none";
         document.getElementById('sidebar-left').style.display = "none";
     }else{
-        document.getElementById('right').style.marginLeft = "3vw";
+        document.getElementById('menu_top').style.marginLeft = "none";
         document.getElementById('sidebar-left').style.display = "none";
     }
 }

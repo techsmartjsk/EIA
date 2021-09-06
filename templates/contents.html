@@ -3,6 +3,7 @@
 
 {% block content %}
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto;">
+    <button onclick="RightToggleFunction()" id="menu_top"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
     <div style="float:left;" id="sidebar-left" class="sidebar-container">
         <button style="top:8% !important; margin-bottom:8%; margin-left:8%; font-size:20px;" onclick="RightToggleFunction()" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
         {% for t in titles%}
@@ -33,6 +34,6 @@
     <a href="www.itpenergised.com/"><img style="height: 47px; width:200px;"src="{% static 'logo2.png' %}"></a>
     {% comment %} <p style="text-align:center;font-size:1vw;padding-left:20%; padding-top: 3%; padding-right:20%; font-family: 'Lato', sans-serif;">] Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] </p> {% endcomment %}
 </div>
-<script src="{% static 'js/maps.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/nts.js' %}" type="text/javascript"></script>
 
 {% endblock content %}
