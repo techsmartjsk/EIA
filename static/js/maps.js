@@ -21,7 +21,7 @@ function RightToggleFunction(){
         document.getElementById('sidebar-left').style.display = "flex";
         
     }else if(document.getElementById('sidebar-left').style.display === "flex"){
-        document.getElementById('ntsinfo').style.marginLeft = "20vw";
+        document.getElementById('ntsinfo').style.marginLeft = "none";
         document.getElementById('menu_top').style.display = "block"
         document.getElementById('sidebar-left').style.display = "none";
         
