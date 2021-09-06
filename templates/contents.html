@@ -13,17 +13,17 @@
 </div>
 {% for i in info %}
 <div class="content">
-    <button style="margin-top:2%;margin-bottom:2%; width:15%;font-size:20px;" onclick="" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Text</button>
+    <button style="margin-top:3%;margin-bottom:2%; width:18%;font-size:20px;" onclick="" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Text</button>
     <h2 style="color:black;font-size:20px;">{{ i.Title }}</h2>
     {{ i.Content | safe }}
 </div>
-{% comment %} {% if i.types == 'MAP' %}
+{% if i.types == 'MAP' %}
     <div class="embed-container">
-        <iframe width="100%" style="height:50%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Sallachy NTS - Imagery Map" src="{{ i.image }}"></iframe>
+        <iframe style="height:50%; margin-left:70%; width:30%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Sallachy NTS - Imagery Map" src="{{ i.image }}"></iframe>
     </div>
 {% else %}
     <img style="height:100%; width:100%" id="bgimage" src="/static/img/images/{{ i.image }}">
-{% endif %} {% endcomment %}
+{% endif %}
 {% endfor%}
 </div>
 <div style="padding-top:5%;  margin-bottom:10%; position:relative; text-align:center; width:100%;">
