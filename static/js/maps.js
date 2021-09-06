@@ -16,7 +16,7 @@ function ToggleFunction(){
 
 function RightToggleFunction(){
     if(document.getElementById('sidebar-left').style.display === "none"){
-        document.getElementById('right').style.marginLeft = "28vw";
+        document.getElementById('right').style.marginLeft = "20vw";
         document.getElementById('sidebar-left').style.display = "flex";
         
     }else if(document.getElementById('sidebar-left').style.display === "flex"){
