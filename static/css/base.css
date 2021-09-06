@@ -260,4 +260,9 @@ small{
   border:2px solid #375069;
   z-index: 999;
   width: 10%;
+  display: none;
+}
+
+#ntsinfo{
+  margin-left: 20vw;
 }
