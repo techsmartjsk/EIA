@@ -3,7 +3,7 @@
 
 {% block content %}
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto;">
-    <button onclick="RightToggleFunction()" id="menu_top"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
+    <button style="top:8% !important; margin-left:8%; font-size:20px;" onclick="RightToggleFunction()" id="menu_top"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
     <div style="float:left;" id="sidebar-left" class="sidebar-container">
         <button style="top:8% !important; margin-bottom:8%; margin-left:8%; font-size:20px;" onclick="RightToggleFunction()" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
         {% for t in titles%}
