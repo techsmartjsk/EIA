@@ -17,16 +17,16 @@ function ToggleFunction(){
 function RightToggleFunction(){
     if(document.getElementById('sidebar-left').style.display === "none"){
         document.getElementById('menu_top').style.display = "none";
-        document.getElementById('nts_info').style.marginLeft = "20vw";
+        document.getElementById('ntsinfo').style.marginLeft = "20vw";
         document.getElementById('sidebar-left').style.display = "flex";
         
     }else if(document.getElementById('sidebar-left').style.display === "flex"){
-        document.getElementById('nts_info').style.marginLeft = "none";
+        document.getElementById('ntsinfo').style.marginLeft = "none";
         document.getElementById('menu_top').style.display = "block"
         document.getElementById('sidebar-left').style.display = "none";
         
     }else{
-        document.getElementById('nts_info').style.marginLeft = "20vw";
+        document.getElementById('ntsinfo').style.marginLeft = "20vw";
         document.getElementById('menu_top').style.display = "none"
         document.getElementById('sidebar-left').style.display = "flex";
     }
