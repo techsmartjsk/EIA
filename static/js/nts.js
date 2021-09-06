@@ -10,13 +10,13 @@ function ToggleFunction(){
 
 function RightToggleFunction(){
     if(document.getElementById('sidebar-left').style.display === "none"){
-        document.getElementById('menu_top').style.display = "block";
+        document.getElementById('menu_top').style.display = "none";
         document.getElementById('sidebar-left').style.display = "flex";
     }else if(document.getElementById('sidebar-left').style.display === "flex"){
-        document.getElementById('menu_top').style.display = "none";
+        document.getElementById('menu_top').style.display = "block";
         document.getElementById('sidebar-left').style.display = "none";
     }else{
-        document.getElementById('menu_top').style.display = "none";
+        document.getElementById('menu_top').style.display = "block";
         document.getElementById('sidebar-left').style.display = "none";
     }
 }
