@@ -51,6 +51,7 @@ def contents(request,title):
 
     info = Contents.objects.filter(Heading__contains = title)
     context['info'] = info
+    context['title'] = title
 
     return render(
         request,

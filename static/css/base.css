@@ -33,14 +33,14 @@ body{
 .sidebar-container {
   position: absolute;
   height: 100%;
-  width: 27vw;
-  background-color: #f3f6fd;
+  width: 18vw;
+  background-color: #f5faff  ;
   display: flex;
   flex-direction: column;
   padding: 20px 0;
   border-radius: 2px;
   z-index: 999;
-  overflow-y: auto;
+  overflow: auto;
 }
   
 .sidebar-item {
@@ -48,6 +48,7 @@ body{
   justify-content: space-around;
   background-color: transparent;
   padding: 20px;
+  padding-bottom: 2px;
   padding-top: 2px !important;
   user-select: none;
   cursor: pointer;
@@ -59,14 +60,27 @@ body{
   color: black;
   transition: color 0.2s;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 18px;
+  padding: 3%;
+  display: block;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid aliceblue;
 }
-.sidebar-item:hover{
-  background-color: rgba(195, 207, 244, 0.5);
-}
+
 .sidebar-item:hover .sidebar-icon {
   transition: stroke 0.2s;
   stroke: rgba(195, 207, 244, 0.5);
+}
+
+.sidebar-title:hover{
+  color: white;
+  background-color: #6fb0d0 ;
+}
+.active, .sidebar-title:active{
+  color: white !important;
+  background-color: #6fb0d0 !important;
 }
 
 
@@ -101,27 +115,22 @@ body{
 }  
 
 #right{
-  margin-left: 28vw;
-  top: 50%;
-  position: absolute;
   border-radius: 40px;
   color: white;
-  padding-left: 10px;
-  background: rgba(195, 207, 244, 1) ;
-  border:2px solid rgba(195, 207, 244, 1) ;
+  background-color:#375069;
+  border:2px solid #375069;
   z-index: 999;
+  width: 50%;
 }  
 
 #right-icon{
-  font-size: 20px;
-  height: 40px;
+  font-size: 10px;
+  height: 20px;
   text-align: center;
   color: white;
-  background: rgba(195, 207, 244, 1);
   border:2px solid rgba(195, 207, 244, 1);
-  padding: 9px;
-  width: 40px;
-  border-radius: 40px;
+  width: 20px;
+  border-radius: 20px;
 }
 
 
@@ -130,11 +139,12 @@ body{
   height: 40px;
   text-align: center;
   color: white;
-  background: rgba(195, 207, 244, 1);
+  background-color:#375069;
   padding: 9px;
+  padding-left: 1px;
   width: 40px;
   border-radius: 40px;
-  border:2px solid rgba(195, 207, 244, 1) ;
+  border:2px solid #375069;
 }
 
 #bgimage{
@@ -235,4 +245,9 @@ small{
   z-index: 40; 
   bottom: 0; 
   margin-bottom: -15px;
+}
+
+/* Content */
+.content{
+  margin-left: 22vw;
 }
