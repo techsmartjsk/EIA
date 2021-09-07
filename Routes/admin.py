@@ -6,6 +6,6 @@ from import_export.admin import ImportExportModelAdmin
 class ContentsAdmin(SummernoteModelAdmin):
     summernote_fields = ('Content',)
 
-admin.site.register(Contents,ImportExportModelAdmin)
+admin.site.register(Contents,SummernoteModelAdmin)
 #admin.site.register(Contents,ContentsAdmin)
-admin.site.register(Volumes,ImportExportModelAdmin)
+admin.site.register(Volumes)
