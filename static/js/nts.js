@@ -8,7 +8,7 @@ function ToggleFunction(){
     }
 }
 
-function RightToggleFunction(){
+function MenuToggleFunction(){
     if(document.getElementById('sidebar-left').style.display === "none"){
         document.getElementById('menu_top').style.display = "none";
         document.getElementById('sidebar-left').style.display = "flex";
