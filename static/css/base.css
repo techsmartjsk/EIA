@@ -33,7 +33,7 @@ body{
 .sidebar-container {
   position: absolute;
   height: 100%;
-  width: 20%;
+  width: 18vw;
   background-color: #f5faff  ;
   display: flex;
   flex-direction: column;
