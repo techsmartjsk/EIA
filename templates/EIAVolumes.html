@@ -12,18 +12,18 @@
         </div>
     {% endfor %}
     </div> 
-    <div style="float:left;" class="content">
+    <div style="float:left;" style="width:35% !important;"class="content">
             <div>
                 <h2 style="font-size:30px;">Chapters</h2>
                 {% for v in volume_info %}
-                <div style="margin-top:30px;">
-                    <a href="{{ v.link }}"style="color:black; font-size:20px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:25px; margin-left:20px;"class="fas fa-download"></i></a>
+                <div style="margin-top:10px;">
+                    <a href="{{ v.link }}"style="color:black; font-size:20px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:20px; margin-left:20px;"class="fas fa-download"></i></a>
                 </div>
                 {% endfor %}
             </div>  
     </div>
-    <div style="float:right; width:32%;">
-        <img style="height:100%; width:32%" id="bgimage" src="/static/EIA.jpg">
+    <div style="float:right; width:42%;">
+        <img style="height:100%; width:42%" id="bgimage" src="/static/EIA.jpg">
     </div>
 </div>
 <div style="padding-top:5%;  margin-bottom:10%; position:relative; text-align:center; width:100%;">
