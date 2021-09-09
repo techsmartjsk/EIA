@@ -6,7 +6,13 @@
 <div id="sidebar-left" class="sidebar-container">
 {% for i in list %}
     <div class="sidebar-item st-1">
+    {% if i.id =3 %}
+        <a href="https://www.dropbox.com/s/cnzlm29lt7dxvz3/Volume3_Sallachy_NatureScot_VPS_HighRes_Final_forDoubleSidedPrinting.pdf?dl=0"class="sidebar-title">{{ i.heading }}</a>
+    {% elif i.id = 4 %}
+        <a href="https://www.dropbox.com/s/vbahd3uzuyku75t/Volume4_Sallachy_THC_VPS_HighRes_Final.pdf?dl=0"class="sidebar-title">{{ i.heading }}</a>
+    {% else %}
         <a href="/volumes/{{ i.id }}"class="sidebar-title">{{ i.heading }}</a>
+    {% endif %}
     </div>
 {% endfor %}
 </div> 
