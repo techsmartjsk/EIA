@@ -7,7 +7,7 @@
 <button style="top:8% !important; margin-bottom:8%; margin-left:8%; font-size:20px;" onclick="MenuToggleFunction()" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
 {% for i in list %}
     <div class="sidebar-item st-1">
-        <a href="/volumes/{{ i.id }}"class="sidebar-title">{{ i.heading }}</a>
+        <a href="{{ i.link }}"class="sidebar-title">{{ i.heading }}</a>
     </div>
 {% endfor %}
 </div> 
