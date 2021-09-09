@@ -61,10 +61,10 @@ def contents(request,title):
 def Volume(request,v_id):
     context={}
 
-    context['list'] = [{ 'id': 1,'heading':'Volume 1 : Chapters'},
-    {'id': 2,'heading':'Volume 2 : Figures'},
-    {'id': 3,'heading':'Volume 3 : LVIA NatureScot Figures'},
-    {'id': 4,'heading':'Volume 4 : LVIA THC Figures'},
+    context['list'] = [{ 'id': 1,'heading':'Volume 1 : Chapters','link':'/volumes/1'},
+    {'id': 2,'heading':'Volume 2 : Figures','link':'/volumes/2'},
+    {'id': 3,'heading':'Volume 3 : LVIA NatureScot Figures','link':'https://www.dropbox.com/s/cnzlm29lt7dxvz3/Volume3_Sallachy_NatureScot_VPS_HighRes_Final_forDoubleSidedPrinting.pdf?dl=0'},
+    {'id': 4,'heading':'Volume 4 : LVIA THC Figures','link':'https://www.dropbox.com/s/vbahd3uzuyku75t/Volume4_Sallachy_THC_VPS_HighRes_Final.pdf?dl=0'},
     {'id': 5,'heading':'Volume 5 : Appendices'}]
 
     volume_info = Volumes.objects.filter(volume__contains = v_id).order_by('id')
