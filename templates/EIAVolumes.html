@@ -13,15 +13,14 @@
     {% endfor %}
     </div> 
     <div style="float:left;" class="content">
-    <button style="font-size:20px;margin-right:29vw !important;"onclick="ToggleFunction()" id="left"><i id="left-icon" class="fas fa-chevron-left"></i>Download</button>
-        <div id="sidebar-right" class="sidebar-content" style="max-width:28vw !important;">
-            <h2 style="font-size:30px;">Chapters</h2>
-            {% for v in volume_info %}
-            <div style="margin-top:30px;">
-                <a href="{{ v.link }}"style="color:black; font-size:20px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:25px; margin-left:20px;"class="fas fa-download"></i></a>
-            </div>
-            {% endfor %}
-        </div>  
+            <div>
+                <h2 style="font-size:30px;">Chapters</h2>
+                {% for v in volume_info %}
+                <div style="margin-top:30px;">
+                    <a href="{{ v.link }}"style="color:black; font-size:20px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:25px; margin-left:20px;"class="fas fa-download"></i></a>
+                </div>
+                {% endfor %}
+            </div>  
     </div>
     <div style="float:right; width:32%;">
         <img style="height:100%; width:32%" id="bgimage" src="/static/EIA.jpg">
