@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto;">
+<div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto; padding-bottom:5%;">
     <button id="menu_top" style="top:30% !important; width:9%; margin-left:1%; font-size:20px;" onclick="MenuToggleFunction()"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
     <div style="float:left;" id="sidebar-left" class="sidebar-container">
     <button style="top:8% !important; margin-bottom:8%; margin-left:8%; font-size:20px;" onclick="MenuToggleFunction()" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
@@ -19,7 +19,7 @@
     <div style="float:left;width:35% !important;" class="content">
             <div>
                 <button style="margin-top:4.5%;margin-bottom:2%; width:23%;font-size:20px;" onclick="" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Text</button>
-                <h2 style="font-size:20px;">Chapters</h2>
+                <h2 style="font-size:20px; font-weight: bold">Chapters</h2>
                 {% for v in volume_info %}
                 <div style="margin-top:10px;">
                     <a href="{{ v.link }}"style="color:black; font-size:20px; text-decoration:none;" target="_blank" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:16px; margin-left:20px;"class="fas fa-download"></i></a>
