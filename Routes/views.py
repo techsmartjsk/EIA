@@ -22,6 +22,9 @@ def maps(request):
         {'name':'EIA','heading':'EIA'},
         {'name':'Benefits','heading':'Benefits'},
         {'name':'Conclusion','heading':'Conclusion'}]
+    
+    context['nav'] = 'nts'
+
 
     return render(
         request,
@@ -52,6 +55,7 @@ def contents(request,title):
     info = Contents.objects.filter(Heading__contains = title)
     context['info'] = info
     context['title'] = title
+    context['nav'] = 'nts'
 
     return render(
         request,
@@ -70,6 +74,7 @@ def Volume(request,v_id):
     volume_info = Volumes.objects.filter(volume__contains = v_id).order_by('id')
 
     context['volume_info'] = volume_info
+    context['nav'] = 'eia'
 
     return render(request,
     'EIAVolumes.html',
