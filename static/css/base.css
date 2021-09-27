@@ -311,3 +311,22 @@ small{
 .nav-link{
   font-size: 1.5vw;
 }
+
+#ntsBelow:hover {
+  color: #5a5a5a !important;
+  background-color:#b4d7fa;
+  border: 1px solid #b4d7fa !important; 
+}
+
+#ntsBelow:hover svg{
+  filter: invert(45%) sepia(91%) saturate(390%) hue-rotate(157deg) brightness(84%) contrast(83%) !important;
+}
+
+#eiaBelow:hover{
+  background-color: #c8e1af;
+  color: #5a5a5a !important;
+}
+
+#eiaBelow:hover > svg{
+  filter: invert(64%) sepia(75%) saturate(292%) hue-rotate(47deg) brightness(87%) contrast(82%);
+}
