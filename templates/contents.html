@@ -19,7 +19,8 @@
                 {{ i.Content | safe }}
         </div>
         <div style="float:right; width:32%;">
-            <button style="margin-top:1.2%; margin-left:1%; position:absolute; width:10%;font-size:20px;" onclick="" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Image</button>
+        <a style="position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;"><img style="width:82px;height: 30px;" src="{% static 'left_icon_image.png' %}"></a>
+        <a style="position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;"><img style="width:30px;height: 30px;" src="{% static 'full_screen_icon.png' %}"></a>
             {% if i.types == 'MAP' %}
                 <div class="embed-container">
                     <iframe style="height:50vw; width:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Sallachy NTS - Imagery Map" src="{{ i.image }}"></iframe>
