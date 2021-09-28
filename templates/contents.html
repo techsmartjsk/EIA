@@ -7,8 +7,8 @@
     <div style="float:left;" id="sidebar-left" class="sidebar-container">
         <img style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
         {% for t in titles%}
-            <div class="sidebar-item st-1">
-                <a href="/contents/{{ t.name }}" class="sidebar-title {% if t.name == title %}active{% endif %}">{{ forloop.counter }}.{{ t.heading }}</a>
+            <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
+                <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.{{ t.heading }}</a>
             </div>
         {% endfor %}
     </div>
