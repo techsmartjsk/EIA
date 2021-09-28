@@ -4,7 +4,7 @@
 {% block content %}
 <button id="menu_top" style="top:30% !important; width:9%; margin-left:1%; font-size:20px;" onclick="RightToggleFunction()"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
 <div id="sidebar-left" style="display:flex;" class="sidebar-container">
-<button style="top:8% !important; margin-bottom:8%; margin-left:8%; font-size:20px;" onclick="RightToggleFunction()" id="right"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
+<img style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
 {% for t in titles%}
     <div class="sidebar-item st-1">
         <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.{{ t.heading }}</a>

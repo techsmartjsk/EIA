@@ -8,9 +8,6 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
-#myNavbar{
-    z-index: 999;
-}
 
 #myVideo{
     object-fit: cover;
@@ -33,7 +30,9 @@ body{
 .sidebar-container {
   position: absolute;
   height: 100%;
-  width: 18vw;
+  width: 240px;
+  max-width: 240px;
+  width: fit-content;
   background-color: #f5faff  ;
   display: flex;
   flex-direction: column;
@@ -43,30 +42,27 @@ body{
   overflow: auto;
 }
   
+
 .sidebar-item {
-  display: inline;
-  justify-content: space-around;
-  background-color: transparent;
-  padding: 20px;
-  padding-bottom: 2px;
-  padding-top: 2px !important;
-  user-select: none;
-  cursor: pointer;
-  margin-left: 5px;
-  font-size: 25px;
+  width: 200px;
+  height: 40px;
+  padding: 4px 12px 4px 9px;
+  border-radius: 8px;
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  margin: 5px 20px 0 20px;
 }
 
-.sidebar-item .sidebar-title {
-  color: black;
-  transition: color 0.2s;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 3%;
-  display: block;
-  width: 200px;
-  background-color: white;
-  border-radius: 10px;
-  border: 2px solid aliceblue;
+.sidebar-title {
+  margin: 0 0 0 3px;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #646464;
 }
 
 .sidebar-item:hover .sidebar-icon {
@@ -74,11 +70,11 @@ body{
   stroke: rgba(195, 207, 244, 0.5);
 }
 
-.sidebar-title:hover{
+.sidebar-item:hover{
   color: white;
   background-color: #6fb0d0 ;
 }
-.active, .sidebar-title:active{
+.active, .sidebar-item:active{
   color: white !important;
   background-color: #6fb0d0 !important;
 }
@@ -135,15 +131,15 @@ body{
 
 
 #left-icon{
-  font-size: 20px;
-  height: 40px;
+  font-size: 10px;
+  height: 20px;
   text-align: center;
   color: white;
   background-color:#375069;
   padding: 9px;
   padding-left: 1px;
-  width: 40px;
-  border-radius: 40px;
+  width: 20px;
+  border-radius: 20px;
   border:2px solid #375069;
 }
 
@@ -167,12 +163,6 @@ body{
 #nts:active{
   color: rgba(195, 207, 244, 1);
   text-decoration: underline;
-}
-
-.navigation{
-  font-size: 1.5vw;
-  font-family: 'Lato', sans-serif !important;
-  color:white !important;
 }
 
 
@@ -247,8 +237,8 @@ small{
 
 /* Content */
 .content{
-  margin-left: 22vw;
-  width: 45%;
+  margin-left: 8%;
+  width: 55%;
 }
 
 #menu_top{
@@ -273,25 +263,34 @@ small{
 }
 
 #nts_link:hover{
-  color: #5a5a5a !important;
   background-color:#b4d7fa;
   border: 1px solid #b4d7fa !important; 
 }
+
+#nts_link:hover > span{
+  color: #5a5a5a !important;
+}
+
 
 .icon{
   filter: invert(93%) sepia(94%) saturate(0%) hue-rotate(172deg) brightness(92%) contrast(70%);
 }
 
+
 #nts_link:hover > svg{
   filter: invert(45%) sepia(91%) saturate(390%) hue-rotate(157deg) brightness(84%) contrast(83%) !important;
 }
 
-.activeNTS > svg{
-  filter: invert(45%) sepia(91%) saturate(390%) hue-rotate(157deg) brightness(84%) contrast(83%) !important;
+.activeNTS > img{
+  content: url("/static/nts_icon.png");
 }
 
 .activeEIA{
   background-color: #c8e1af;
+  color: #5a5a5a !important;
+}
+
+.activeEIA > span{
   color: #5a5a5a !important;
 }
 
@@ -300,12 +299,16 @@ small{
   color: #5a5a5a !important;
 }
 
-.activeEIA > svg{
-  filter: invert(64%) sepia(75%) saturate(292%) hue-rotate(47deg) brightness(87%) contrast(82%);
+#eia_link:hover > span{
+  color: #5a5a5a !important;
 }
 
-#eia_link:hover > svg{
-  filter: invert(64%) sepia(75%) saturate(292%) hue-rotate(47deg) brightness(87%) contrast(82%);
+.activeEIA > img{
+  content: url("/static/eia_green_icon.png");
+}
+
+#eia_link:hover > img{
+  content: url("/static/eia_green_icon.png");
 }
 
 .nav-link{
