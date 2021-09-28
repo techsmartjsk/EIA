@@ -286,8 +286,8 @@ small{
 }
 
 
-#nts_link:hover > svg{
-  filter: invert(45%) sepia(91%) saturate(390%) hue-rotate(157deg) brightness(84%) contrast(83%) !important;
+#nts_link:hover > img{
+  content: url("/static/nts_icon.png");
 }
 
 .activeNTS > img{
