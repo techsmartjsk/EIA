@@ -8,6 +8,11 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
+#myNavbar{
+  float: right;
+  margin-right: 40px;
+}
+
 
 #myVideo{
     object-fit: cover;
