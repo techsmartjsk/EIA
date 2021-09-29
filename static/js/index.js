@@ -45,7 +45,7 @@ image_collapse.addEventListener("click",function(){
 });
 
 image_full_screen.addEventListener("click",function(){
-    bgimage.style.width = "100%";
+    bgimage.style.width = width - 250;
     image_content.style.width = width - 250;
     image_content.style.marginLeft = "250px";
     image_content.style.float = "none";
