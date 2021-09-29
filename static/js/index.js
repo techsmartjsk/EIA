@@ -3,6 +3,8 @@ var body = document.body,
 
 var height = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight )
+var width = Math.max(body.scrollWidth, body.offsetWidth, 
+                        html.clientWidth, html.scrollWidth, html.offsetWidth);
 
 var sidebar = document.getElementById("menu");
 var title = document.getElementById("title");
@@ -34,7 +36,6 @@ var image_full_screen = document.getElementById("image_full_screen");
 var image_content = document.getElementById("image_content");
 
 image_collapse.addEventListener("click",function(){
-    image_content.style.width = "30%";
     image_content.style.marginLeft = "0px";
     image_content.style.float = "right";
     content.style.display = "block";
@@ -42,7 +43,7 @@ image_collapse.addEventListener("click",function(){
 });
 
 image_full_screen.addEventListener("click",function(){
-    image_content.style.width = "100%";
+    image_content.style.width = width - 250;
     image_content.style.marginLeft = "250px";
     image_content.style.float = "none";
     content.style.display = "none";
