@@ -2,22 +2,31 @@
 {% load static %}
 
 {% block content %}
-<button id="menu_top" style="top:30% !important; width:9%; margin-left:1%; font-size:20px;" onclick="RightToggleFunction()"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
-<div id="sidebar-left" style="display:flex;" class="sidebar-container">
-<img style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
+<div id="sidebar-left" class="sidebar-container">
+<img id="left_close_sidebar"style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
 {% for t in titles%}
     <div class="sidebar-item st-1">
-        <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.{{ t.heading }}</a>
+        <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
     </div>
 {% endfor %}
 </div>
-<div style="height:100%; background: black !important; position:absolute;" >
-    <h1 style="text-align:center; color:white; margin-top:20px;font-size:2.5vw;">Sallachy Wind Farm</h1>
+
+<div id="sidebar-left-small">
+<img style="width: 35px;height: 30px; margin-left:20px;"src="{% static 'menu_left_closed.png' %}">
+{% for t in titles%}
+    <div class="sidebar-item st-1">
+        <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span id="title" style="margin-left:10px;">{{ t.heading }}</span></a>
+    </div>
+{% endfor %}
+</div>
+
+<div id="about"style="height:100%;" >
+    <h1 style="text-align:center; margin-top:20px;font-size:2.5vw;">Sallachy Wind Farm</h1>
     <div style="margin-top:40px;"> 
-        <p id="ntsinfo" style="color:white; padding:20px !important; font-size:1.5vw;">This document is a Non-Technical Summary (NTS) of the Sallachy Wind Farm Environmental Impact Assessment (EIA) Report which supports the application by WKN GmbH (the Applicant) for the development of a wind farm (the Proposed Development) in the Scottish Highlands. The Applicant is preparing an application for the construction, operation and decommissioning of the Proposed Development, located approximately 18 km north-west of Lairg on the shores of Loch Shin. Planning permission for the Proposed Development is being sought through an application to The Highland Council for planning permission under the Town and Country Planning (Scotland) Act 1997 (as amended) (Scottish Government, 1997). Since the Proposed Development was first introduced to the local community in 2008, the Applicant has engaged closely with the local community and sought to ensure that any changes to accommodate local representations and responses are incorporated where possible. All of the Applicant’s projects are developed with a strong commitment to local communities to ensure that local amenities are protected where possible, environmental effects are minimised, and local employment opportunities and community benefit funds are provided to maximise local benefits.</p>
+        <p style="font-size:1.5vw;">This document is a Non-Technical Summary (NTS) of the Sallachy Wind Farm Environmental Impact Assessment (EIA) Report which supports the application by WKN GmbH (the Applicant) for the development of a wind farm (the Proposed Development) in the Scottish Highlands. The Applicant is preparing an application for the construction, operation and decommissioning of the Proposed Development, located approximately 18 km north-west of Lairg on the shores of Loch Shin. Planning permission for the Proposed Development is being sought through an application to The Highland Council for planning permission under the Town and Country Planning (Scotland) Act 1997 (as amended) (Scottish Government, 1997). Since the Proposed Development was first introduced to the local community in 2008, the Applicant has engaged closely with the local community and sought to ensure that any changes to accommodate local representations and responses are incorporated where possible. All of the Applicant’s projects are developed with a strong commitment to local communities to ensure that local amenities are protected where possible, environmental effects are minimised, and local employment opportunities and community benefit funds are provided to maximise local benefits.</p>
     </div>
 </div>
-<div style="padding-top:10%;  margin-bottom:10%; text-align:center; width:100%;">
+<div style="text-align:center; width:100%;">
     <p style="text-align:center;font-size:1vw;padding-left:20%; padding-top: 3%; padding-right:20%; font-family: 'Lato', sans-serif;">Created by ITPEnergised for WKN</p>
     <a href="www.itpenergised.com/"><img style="height: 47px; width:200px;"src="{% static 'logo2.png' %}"></a>
     {% comment %} <p style="text-align:center;font-size:1vw;padding-left:20%; padding-top: 3%; padding-right:20%; font-family: 'Lato', sans-serif;">] Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] </p> {% endcomment %}

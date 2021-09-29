@@ -8,9 +8,18 @@
         <img style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
         {% for t in titles%}
             <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
-                <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.{{ t.heading }}</a>
+                <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}. <span style="margin-left:10px;">{{ t.heading }}<span></a>
             </div>
         {% endfor %}
+    </div>
+
+    <div id="sidebar-left-small">
+    <img style="width: 35px;height: 30px; margin-left:20px;"src="{% static 'menu_left_closed.png' %}">
+    {% for t in titles%}
+        <div class="sidebar-item st-1">
+            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span id="title" style="margin-left:10px;">{{ t.heading }}</span></a>
+        </div>
+    {% endfor %}
     </div>
     {% for i in info %}
         <div style="float:left;" class="content">

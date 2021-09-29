@@ -59,7 +59,7 @@
       </svg>
     </a>
 
-    <div>
+    <div id="navigation_bar">
       <ul id="myNavbar" style="display:inline-flex; list-style-type:none;">
         <li class="{% if nav == 'home'%}activeNav{% endif %}">
           <a style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
@@ -93,36 +93,27 @@
         </li>
       </ul>
     </div>
-    {% comment %} <nav id="myNavbar" class="navbar navbar-expand-lg navbar-light">
-        <div class="justify-content-end">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" style="color:#c8c8c8;font-size:1.2vw;margin-top:9px;" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if nav == 'nts'%}activeNTS{% endif %}" id="nts_link" style="color:#c8c8c8; width: 250px; height: 55px; margin: 1px 17px 0 0; padding: 0 0 0 8px; font-size:1.2vw;" href="/maps">
-              <img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"><br>
-              <span style="width: 192px;height: 55px;font-family: Lato;font-size: 16px;font-weight: bold;font-stretch: normal;font-style: normal;line-height: normal;letter-spacing: normal;">Non Technical Summary<span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if nav == 'eia'%}activeEIA{% endif %}" id="eia_link" style="display:-webkit-flex; width: 250px; height: 55px; color:#c8c8c8;border-radius:15px;margin: 0 41px 1px 17px;border: solid 1px #c8c8c8;padding: 0 0 0 8px;" href="/volumes/1">
-                <img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 3px 7px 0;">
-              <span style="display:inline-block; margin: 6px 0 0 9px; width: 192px;height: 55px;font-family: Lato;font-size: 16px;font-weight: bold;font-stretch: normal;font-style: normal;line-height: normal;letter-spacing: normal;color: #c8c8c8;">Environmental Impact Assesment Report<span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:#c8c8c8;font-size:1.2vw;margin-top:9px;" href="/disclaimer">Additional Information</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:#c8c8c8;font-size:1.2vw;margin-top:9px;" href="/disclaimer">Contact</a>
-            </li>
-          </ul>
-        </div>
-    </nav> {% endcomment %}
+    {% comment %} Navbar 1024 Pixels {% endcomment %}
 </div>
+<nav id="smallScreenNav" role='navigation'>
+  <div style="margin-top:100px;" id="menuToggle">
+    <input style="color:white;"type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="/"><li>Home</li></a>
+      <a href="/maps"><li>Non Technical Summary</li></a>
+      <a href="/volumes/1"><li>Environmental Impact Assessment</li></a>
+      <a href="/"><li>Additional Information</li></a>
+      <a href="/"><li>Contact</li></a>
+    </ul>
+  </div>
+</nav>
 {% block content %}{% endblock content %}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/2dcc255ddc.js" crossorigin="anonymous"></script>
+<script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>

@@ -16,6 +16,19 @@
         </div>
     {% endfor %}
     </div> 
+
+    <div style="float:left;" id="sidebar-left-small" class="sidebar-container">
+        <img style="width: 35px;height: 30px;margin:20px;"src="{% static 'menu_left_closed.png' %}">
+    {% for i in list %}
+        <div class="sidebar-item st-1">
+        {% if forloop.counter == 1 %}
+            <a href="{{ i.link }}" class="sidebar-title">{{ forloop.counter }}.<span id="title">{{ i.heading }}</span></a>
+        {% else %}
+            <a href="{{ i.link }}" target="_blank" class="sidebar-title">{{ forloop.counter }}.<span id="title">{{ i.heading }}</span></a>
+        {% endif %}
+        </div>
+    {% endfor %}
+    </div> 
     <div style="float:left;width:35% !important;" class="content">
             <div>
                 <h2 style="font-size:20px; font-weight: bold">Chapters</h2>
