@@ -37,7 +37,6 @@ var image_content = document.getElementById("image_content");
 var bgimage = document.getElementById("bgimage");
 
 image_collapse.addEventListener("click",function(){
-    bgimage.style.width = "30%";
     image_content.style.width = "30%";
     image_content.style.marginLeft = "0px";
     image_content.style.float = "right";
@@ -46,7 +45,6 @@ image_collapse.addEventListener("click",function(){
 });
 
 image_full_screen.addEventListener("click",function(){
-    bgimage.style.width = "30%";
     image_content.style.width = width - 250;
     image_content.style.marginLeft = "250px";
     image_content.style.float = "none";
