@@ -6,10 +6,16 @@
 
 body{
   font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
 }
 
 #about{
   margin-left: 260px;
+}
+
+#image_content{
+  float: right;
+  width: 30%;
 }
 
 /* Navigation */
@@ -332,7 +338,7 @@ small{
 /* Content */
 .content{
   margin-left: 250px;
-  width: 45%;
+  width: 47%;
   padding: 1.5%;
 }
 

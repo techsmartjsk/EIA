@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto;">
+<div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow-x:hidden">
     <button style="top:2.5% !important; margin-left:1.5%; font-size:20px; width:8.5%;" onclick="MenuToggleFunction()" id="menu_top"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
     <div style="float:left;" id="sidebar-left" class="sidebar-container">
         <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
@@ -27,15 +27,15 @@
             <h2 style="color:black;font-size:25px; margin-top:15px;">{{ i.Title }}</h2>
                 {{ i.Content | safe }}
         </div>
-        <div style="float:right; width:32%;">
-        <a style="position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;"><img style="width:82px;height: 30px;" src="{% static 'left_icon_image.png' %}"></a>
-        <a style="position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;"><img style="width:30px;height: 30px;" src="{% static 'full_screen_icon.png' %}"></a>
+        <div id="image_content">
+        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
+        <img id="image_full_screen" style="width:30px;height: 30px;position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;" src="{% static 'full_screen_icon.png' %}">
             {% if i.types == 'MAP' %}
                 <div class="embed-container">
                     <iframe style="height:50vw; width:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Sallachy NTS - Imagery Map" src="{{ i.image }}"></iframe>
                 </div>
             {% else %}
-                <img style="height:100%; width:32%" id="bgimage" src="/static/img/images/{{ i.image }}">
+                <img style="height:100%;" id="bgimage" src="/static/img/images/{{ i.image }}">
             {% endif %}
         </div>
     {% endfor%}

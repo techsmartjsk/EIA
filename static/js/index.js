@@ -27,9 +27,27 @@ var sidebar_left_small = document.getElementById("sidebar-left-small");
 var sidebar_left = document.getElementById("sidebar-left");
 var sidebar_small = document.getElementsByClassName("sidebar_small");
 var content = document.getElementById("about");
-
-
 var sidebar_open_button = document.getElementById("left_open_sidebar");
+
+var image_collapse = document.getElementById("image_collapse");
+var image_full_screen = document.getElementById("image_full_screen");
+var image_content = document.getElementById("image_content");
+
+image_collapse.addEventListener("click",function(){
+    image_content.style.width = "30%";
+    image_content.style.marginLeft = "0px";
+    image_content.style.float = "right";
+    content.style.display = "block";
+    document.getElementById("image_collapse").src = "/static/left_icon_image.png";
+});
+
+image_full_screen.addEventListener("click",function(){
+    image_content.style.width = "100%";
+    image_content.style.marginLeft = "250px";
+    image_content.style.float = "none";
+    content.style.display = "none";
+    document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+});
 
 sidebar_open_button.addEventListener("click",function(){
     sidebar_left.style.display = "flex";
