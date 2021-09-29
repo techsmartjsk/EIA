@@ -8,9 +8,67 @@ body{
   font-family: 'Lato', sans-serif;
 }
 
+/* Navigation */
+
 #myNavbar{
   float: right;
-  margin-right: 40px;
+  margin-right: 20px;
+}
+
+ul#myNavbar li a{
+  display: inline;
+  color:#c8c8c8;
+  font-size: 18px;
+  margin-top:9px;
+}
+
+ul#myNavbar li{
+  margin-right: 20px;
+  text-align: center;
+}
+
+ul#myNavbar li a:hover{
+  color: white;
+}
+
+#nts_li:hover a{
+  color: #4bafeb !important;
+} 
+
+#eia_li:hover a{
+  color: #82af55 !important;
+} 
+
+#nts_li:hover img{
+  content: url("/static/nts_icon.png");
+}
+
+#eia_li:hover img{
+  content: url("/static/eia_green_icon.png");
+}
+
+.activeNav{
+  color: white;
+}
+
+.activeNTS a{
+  color: #4bafeb !important;
+}
+
+.activeNTS img{
+  content: url("/static/nts_icon.png");
+}
+
+.activeEIA a{
+  color: #82af55 !important;
+}
+
+.activeEIA img{
+  content: url("/static/eia_green_icon.png");
+}
+
+.activeNav a{
+  color: white !important;
 }
 
 
@@ -276,11 +334,6 @@ small{
   margin-left: 20vw;
 }
 
-.activeNTS{
-  color: #5a5a5a !important;
-  background-color:#b4d7fa;
-  border: 1px solid #b4d7fa !important; 
-}
 
 #nts_link:hover{
   background-color:#b4d7fa;
@@ -301,18 +354,7 @@ small{
   content: url("/static/nts_icon.png");
 }
 
-.activeNTS > img{
-  content: url("/static/nts_icon.png");
-}
 
-.activeEIA{
-  background-color: #c8e1af;
-  color: #5a5a5a !important;
-}
-
-.activeEIA > span{
-  color: #5a5a5a !important;
-}
 
 #eia_link:hover{
   background-color: #c8e1af;
@@ -321,10 +363,6 @@ small{
 
 #eia_link:hover > span{
   color: #5a5a5a !important;
-}
-
-.activeEIA > img{
-  content: url("/static/eia_green_icon.png");
 }
 
 #eia_link:hover > img{
@@ -348,10 +386,6 @@ small{
 #eiaBelow:hover{
   background-color: #c8e1af;
   color: #5a5a5a !important;
-}
-
-#eiaBelow:hover > svg{
-  filter: invert(64%) sepia(75%) saturate(292%) hue-rotate(47deg) brightness(87%) contrast(82%);
 }
 
 a{
