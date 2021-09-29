@@ -34,9 +34,10 @@ var sidebar_open_button = document.getElementById("left_open_sidebar");
 var image_collapse = document.getElementById("image_collapse");
 var image_full_screen = document.getElementById("image_full_screen");
 var image_content = document.getElementById("image_content");
+var bgimage = document.getElementById("bgimage");
 
 image_collapse.addEventListener("click",function(){
-    image_content.style.width = "30%";
+    bgimage.style.width = "30%";
     image_content.style.marginLeft = "0px";
     image_content.style.float = "right";
     content.style.display = "block";
