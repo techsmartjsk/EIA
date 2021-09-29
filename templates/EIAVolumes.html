@@ -22,9 +22,9 @@
     {% for i in list %}
         <div class="sidebar-item st-1">
         {% if forloop.counter == 1 %}
-            <a href="{{ i.link }}" class="sidebar-title">{{ forloop.counter }}.<span id="title">{{ i.heading }}</span></a>
+            <a href="{{ i.link }}" class="sidebar-title">{{ forloop.counter }}.</a>
         {% else %}
-            <a href="{{ i.link }}" target="_blank" class="sidebar-title">{{ forloop.counter }}.<span id="title">{{ i.heading }}</span></a>
+            <a href="{{ i.link }}" target="_blank" class="sidebar-title">{{ forloop.counter }}.</a>
         {% endif %}
         </div>
     {% endfor %}
