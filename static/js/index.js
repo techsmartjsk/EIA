@@ -45,11 +45,20 @@ image_collapse.addEventListener("click",function(){
 });
 
 image_full_screen.addEventListener("click",function(){
-    image_content.style.width = width - 250;
-    image_content.style.marginLeft = "250px";
-    image_content.style.float = "none";
-    content.style.display = "none";
-    document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+    if(document.body.contains(bgimage)){
+        bgimage.style.width = "100%";
+        image_content.style.width = width - 250;
+        image_content.style.marginLeft = "250px";
+        image_content.style.float = "none";
+        content.style.display = "none";
+        document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+    }else{
+        image_content.style.width = width - 250;
+        image_content.style.marginLeft = "250px";
+        image_content.style.float = "none";
+        content.style.display = "none";
+        document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+    }
 });
 
 sidebar_open_button.addEventListener("click",function(){
