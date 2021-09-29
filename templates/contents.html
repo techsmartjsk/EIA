@@ -5,7 +5,7 @@
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto;">
     <button style="top:2.5% !important; margin-left:1.5%; font-size:20px; width:8.5%;" onclick="MenuToggleFunction()" id="menu_top"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
     <div style="float:left;" id="sidebar-left" class="sidebar-container">
-        <img style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
+        <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
         {% for t in titles%}
             <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
                 <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}. <span style="margin-left:10px;">{{ t.heading }}<span></a>
@@ -14,15 +14,15 @@
     </div>
 
     <div id="sidebar-left-small">
-    <img style="width: 35px;height: 30px; margin-left:20px;"src="{% static 'menu_left_closed.png' %}">
+    <img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px;"src="{% static 'menu_left_closed.png' %}">
     {% for t in titles%}
-        <div class="sidebar-item st-1">
-            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span id="title" style="margin-left:10px;">{{ t.heading }}</span></a>
+        <div class="sidebar-item st-1 sidebar_small">
+            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.</a>
         </div>
     {% endfor %}
     </div>
     {% for i in info %}
-        <div style="float:left;" class="content">
+        <div id="about"style="float:left;" class="content">
             <a><img style="width: 22px;height: 29px;padding: 0 1px 4px 3px;"src="{% static 'page_icon.png' %}"><span style="font-size: 14px; margin-left:4px;">Corresponding EIA Report  Chapter<span></a>
             <h2 style="color:black;font-size:25px; margin-top:15px;">{{ i.Title }}</h2>
                 {{ i.Content | safe }}

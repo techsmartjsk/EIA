@@ -3,7 +3,7 @@
 
 {% block content %}
 <div id="sidebar-left" class="sidebar-container">
-<img id="left_close_sidebar"style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
+<img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
 {% for t in titles%}
     <div class="sidebar-item st-1">
         <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
@@ -12,10 +12,10 @@
 </div>
 
 <div id="sidebar-left-small">
-<img style="width: 35px;height: 30px; margin-left:20px;"src="{% static 'menu_left_closed.png' %}">
+<img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px;"src="{% static 'menu_left_closed.png' %}">
 {% for t in titles%}
-    <div class="sidebar-item st-1">
-        <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span id="title" style="margin-left:10px;">{{ t.heading }}</span></a>
+    <div class="sidebar-item st-1 sidebar_small">
+        <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.</a>
     </div>
 {% endfor %}
 </div>

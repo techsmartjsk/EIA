@@ -14,6 +14,10 @@ body{
 
 /* Navigation */
 
+#menuToggle{
+  z-index: 99999;
+}
+
 #myNavbar{
   float: right;
   margin-right: 20px;
@@ -428,9 +432,6 @@ small{
     z-index: 999;
     overflow: auto;
   }
-  #title{
-    display: none;
-  }
   #sidebar-left{
     display: none;
   }
@@ -461,8 +462,6 @@ a
   position: absolute;
   top: 50px;
   right: 50px;
-  
-  z-index: 1;
   
   -webkit-user-select: none;
   user-select: none;
@@ -589,14 +588,6 @@ a
   opacity: 1;
 }
 
-@media screen and (max-width: 1024px) {
-  #menu {
-    transform: none;
-    opacity: 0;
-
-    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
-}
 
 ul#menu a{
   color: white;
