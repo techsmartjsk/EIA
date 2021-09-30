@@ -38,6 +38,14 @@ body{
 }
 
 
+
+ul#footer_nav li a{  
+  display: inline;
+  color: #5a5a5a;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
 ul#myNavbar li a{
   display: inline;
   color:#c8c8c8;
