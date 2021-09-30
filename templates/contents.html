@@ -37,8 +37,8 @@
                 {{ i.Content | safe }}
         </div>
         <div id="image_content">
-        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
-        <img id="image_full_screen" style="width:30px;height: 30px;position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;" src="{% static 'full_screen_icon.png' %}">
+        <img id="image_full_screen" style="width:82px;position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
+        <img id="image_collapse" style="width:30px;height: 30px;position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;" src="{% static 'full_screen_icon.png' %}">
             {% if i.types == 'MAP' %}
                 <div class="embed-container">
                     <iframe style="height:50vw; width:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Sallachy NTS - Imagery Map" src="{{ i.image }}"></iframe>
