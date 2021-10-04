@@ -38,33 +38,35 @@ var bgimage = document.getElementById("bgimage");
 
 if(document.body.contains(image_collapse)){
     image_collapse.addEventListener("click",function(){
-        image_content.style.width = "30%";
-        image_content.style.marginLeft = "0px";
-        image_content.style.float = "right";
-        content.style.display = "block";
-        document.getElementById("image_collapse").src = "/static/left_icon_image.png";
-    });
-}
-
-if(document.body.contains(image_full_screen)){
-
-    image_full_screen.addEventListener("click",function(){
-        if(document.body.contains(bgimage)){
-            bgimage.style.width = "100%";
-            image_content.style.width = width - 250;
-            image_content.style.marginLeft = "250px";
-            image_content.style.float = "none";
-            content.style.display = "none";
-            document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+        if(image_content.style.width == '30%'){
+            if(document.body.contains(bgimage)){
+                bgimage.style.width = "100%";
+                image_content.style.width = width - 250;
+                image_content.style.marginLeft = "250px";
+                image_content.style.float = "none";
+                content.style.display = "none";
+                document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+            }else{
+                image_content.style.width = width - 250;
+                image_content.style.marginLeft = "250px";
+                image_content.style.float = "none";
+                content.style.display = "none";
+                document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+            }
         }else{
-            image_content.style.width = width - 250;
-            image_content.style.marginLeft = "250px";
-            image_content.style.float = "none";
-            content.style.display = "none";
-            document.getElementById("image_collapse").src = "/static/Image_collapse_icon.png";
+            if(document.body.contains(bgimage)){
+                bgimage.style.width = "30%";
+            }
+            image_content.style.width = "30%";
+            image_content.style.marginLeft = "0px";
+            image_content.style.float = "right";
+            content.style.display = "block";
+            document.getElementById("image_collapse").src = "/static/left_icon_image.png";
         }
     });
 }
+
+
 
 
 sidebar_open_button.addEventListener("click",function(){

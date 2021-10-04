@@ -4,7 +4,7 @@
 {% block content %}
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto; padding-bottom:5%; overflow-x:hidden;">
     <div style="float:left;" id="sidebar-left" class="sidebar-container">
-        <img style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
+        <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
     {% for i in list %}
         <div class="sidebar-item st-1">
         {% if forloop.counter == 1 %}
@@ -17,9 +17,9 @@
     </div> 
 
     <div style="float:left;" id="sidebar-left-small" class="sidebar-container">
-        <img style="width: 35px;height: 30px;margin:20px;"src="{% static 'menu_left_closed.png' %}">
+        <img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px; margin-bottom:20px;" src="{% static 'menu_left_closed.png' %}">
     {% for i in list %}
-        <div class="sidebar-item st-1">
+        <div class="sidebar-item st-1 sidebar_small">
         {% if forloop.counter == 1 %}
             <a href="{{ i.link }}" class="sidebar-title">{{ forloop.counter }}.</a>
         {% else %}
@@ -28,20 +28,24 @@
         </div>
     {% endfor %}
     </div> 
-    <div style="float:left;width:35% !important;" class="content">
+    <div id="about" style="float:left;width:35% !important;" class="content">
             <div>
                 <h2 style="font-size:20px; font-weight: bold">Chapters</h2>
                 {% for v in volume_info %}
                 <div style="margin-top:10px;">
-                    <a href="{{ v.link }}"style="color:black; font-size:20px; text-decoration:none;" target="_blank" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:16px; margin-left:20px;"class="fas fa-download"></i></a>
+                    <a href="{{ v.link }}"style="color:black; font-size:20px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:16px; margin-left:20px;"class="fas fa-download"></i></a>
                 </div>
                 {% endfor %}
             </div>  
     </div>
-    <div style="float:right; width:42%;">
-        <a style="position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;"><img style="width:82px;height: 30px;" src="{% static 'left_icon_image.png' %}"></a>
-        <a style="position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;"><img style="width:30px;height: 30px;" src="{% static 'full_screen_icon.png' %}"></a>
-        <img style="height:100%; width:42%" id="bgimage" src="/static/EIA.jpg">
+    <div id="image_content" style="float:right;">
+        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
+        <form action="/IMAGE" method="POST" target="_blank">
+        {% csrf_token %}
+            <input name="image" value="EIA.jpg" hidden>
+            <input type="image" alt="submit" src="{% static 'full_screen_icon.png' %}" style="width:30px; height:30px; position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;">
+        </form>
+        <img style="height:100%;" id="bgimage" src="/static/EIA.jpg">
     </div>
 </div>
 <div style="padding-top:5%;  margin-bottom:10%; position:relative; text-align:center; width:100%;">

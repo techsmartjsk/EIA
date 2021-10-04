@@ -8,4 +8,6 @@ urlpatterns = [
     path('contents/<str:title>',views.contents,name='contents'),
     path('volumes/<int:v_id>',views.Volume,name='Volumes'),
     path('disclaimer/',views.Disclaimer,name='Disclaimer'),
+    path('IMAGE',views.ImageFullScreen,name='ImageFullScreen'),
+    path('MAP',views.MapFullScreen,name='MapFullScreen'),
 ]
