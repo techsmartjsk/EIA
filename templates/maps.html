@@ -7,13 +7,9 @@
 {% for t in titles%}
     <div class="sidebar-item st-1">
     {% if forloop.counter < 10 %}
-        <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
-            <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
-        </div>
+            <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.</a>
     {% else %}
-        <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
-            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
-        </div>
+            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.</a>
     {% endif %}
     </div>
 {% endfor %}
@@ -29,13 +25,9 @@
 {% for t in titles%}
     <div class="sidebar-item st-1 sidebar_small">
     {% if forloop.counter < 10 %}
-        <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
-            <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
-        </div>
+            <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.</a>
     {% else %}
-        <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
-            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
-        </div>
+            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.</a>
     {% endif %}
     </div>
 {% endfor %}
