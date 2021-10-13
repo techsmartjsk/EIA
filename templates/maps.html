@@ -7,9 +7,9 @@
 {% for t in titles%}
     <div class="sidebar-item st-1">
     {% if forloop.counter < 10 %}
-            <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.</a>
+            <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
     {% else %}
-            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.</a>
+            <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
     {% endif %}
     </div>
 {% endfor %}
