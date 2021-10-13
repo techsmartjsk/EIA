@@ -9,7 +9,7 @@
         {% for t in titles%}
         {% if forloopcounter < 10 %}
             <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
-                <a href="/contents/{{ t.name }}" class="sidebar-title">{{ 0 + forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
+                <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
             </div>
         {% else %}
             <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
@@ -30,7 +30,7 @@
     {% for t in titles%}
         {% if forloopcounter < 10 %}
             <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
-                <a href="/contents/{{ t.name }}" class="sidebar-title">{{ 0 + forloop.counter }}.</a>
+                <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.</a>
             </div>
         {% else %}
             <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
