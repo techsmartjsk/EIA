@@ -74,7 +74,7 @@ if(document.body.contains(image_collapse)){
 sidebar_open_button.addEventListener("click",function(){
     sidebar_left.style.display = "flex";
     sidebar_left_small.style.display = "none";
-    content.style.marginLeft = "260px";
+    content.style.marginLeft = "280px";
 });
 
 
@@ -85,5 +85,5 @@ sidebar_close_button.addEventListener("click",function(){
         sidebar_small[s].style.width = "35px";
         sidebar_small[s].style.height = "40px";
     }
-    content.style.marginLeft = "70px";
+    content.style.marginLeft = "90px";
 });
