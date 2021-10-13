@@ -436,6 +436,11 @@ small{
     display:block;
     width: 65px;
   }
+
+  #menu{
+    display: none;
+  }
+  
   #sidebar-left-small{
     display: flex;
     position: absolute;
