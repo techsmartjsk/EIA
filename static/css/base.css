@@ -460,7 +460,7 @@ small{
   #sidebar-left{
     display: none;
   }
-  .sidebar-item{
+  .sidebar_small{
     width: 35px;
     height: 40px;
     text-align: center;
