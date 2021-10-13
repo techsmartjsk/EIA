@@ -50,11 +50,11 @@
                 {{ i.Content | safe }}
         </div>
         <div id="image_content">
-        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:13%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
+        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:5%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
         <form action="/{{ i.types}}" method="POST" target="_blank">
         {% csrf_token %}
             <input name="image" value="{{ i.image }}" hidden>
-            <input type="image" alt="submit" src="{% static 'full_screen_icon.png' %}" style="width:30px; height:30px; position:absolute; z-index:999; margin-left:19%;margin-top:1.5%;"></input>
+            <button type="image" alt="submit" style="width:115px; height:30px; position:absolute; z-index:999; background-color: #fff; border: solid 1px #ebebeb;border-radius: 15px;margin-left:15%;margin-top:1.5%;"><i class="fas fa-plus"></i>Open in new Tab</button>
         <form>
             {% if i.types == 'MAP' %}
                 <div class="embed-container">
