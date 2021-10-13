@@ -22,6 +22,7 @@ var styles = {
     "z-index": "999",
     "overflow-x": "hidden",
 }
+
 sidebar.style.height = height;
 sidebar.style.width = width;
 
