@@ -7,10 +7,12 @@
     <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
     {% for t in titles%}
         <div class="sidebar-item st-1">
-        {% if forloop.counter < 10 %}
-                <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
+        {% if forloop.counter < 9 %}
+                <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
+        {% elif forloop.counter == 9%}
+                <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
         {% else %}
-                <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}<span></a>
+                <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
         {% endif %}
         </div>
     {% endfor %}
@@ -37,17 +39,17 @@
   margin: 35px 176px 5px 20px;
   padding: 0 1px 1px 0;"src="{% static 'download_button.png' %}">
     </div>
+    <div id="about"style="height:100%;background-color: #e4eef8; margin-right:300px;" >
+        <img src="{% static 'nts_icon.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
+        <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Non Technical Summary</h1><br/>
+        <hr>
+        <br/>
+        <div> 
+            <p style="font-size:18px;color:#646464;">This document is a Non-Technical Summary (NTS) of the Sallachy Wind Farm Environmental Impact Assessment (EIA) Report which supports the application by WKN GmbH (the Applicant) for the development of a wind farm (the Proposed Development) in the Scottish Highlands. <br/> <br/>The Applicant is preparing an application for the construction, operation and decommissioning of the Proposed Development, located approximately 18 km north-west of Lairg on the shores of Loch Shin. Planning permission for the Proposed Development is being sought through an application to The Highland Council for planning permission under the Town and Country Planning (Scotland) Act 1997 (as amended) (Scottish Government, 1997). <br/><br/>Since the Proposed Development was first introduced to the local community in 2008, the Applicant has engaged closely with the local community and sought to ensure that any changes to accommodate local representations and responses are incorporated where possible. All of the Applicant’s projects are developed with a strong commitment to local communities to ensure that local amenities are protected where possible, environmental effects are minimised, and local employment opportunities and community benefit funds are provided to maximise local benefits.</p>
+        </div>
+    </div>  
 </div>
 
-<div id="about"style="height:100%;background-color: #e4eef8; margin-right:300px;" >
-    <img src="{% static 'nts_icon.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
-    <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Non Technical Summary</h1><br/>
-    <hr>
-    <br/>
-    <div> 
-        <p style="font-size:18px;color:#646464;">This document is a Non-Technical Summary (NTS) of the Sallachy Wind Farm Environmental Impact Assessment (EIA) Report which supports the application by WKN GmbH (the Applicant) for the development of a wind farm (the Proposed Development) in the Scottish Highlands. <br/> <br/>The Applicant is preparing an application for the construction, operation and decommissioning of the Proposed Development, located approximately 18 km north-west of Lairg on the shores of Loch Shin. Planning permission for the Proposed Development is being sought through an application to The Highland Council for planning permission under the Town and Country Planning (Scotland) Act 1997 (as amended) (Scottish Government, 1997). <br/><br/>Since the Proposed Development was first introduced to the local community in 2008, the Applicant has engaged closely with the local community and sought to ensure that any changes to accommodate local representations and responses are incorporated where possible. All of the Applicant’s projects are developed with a strong commitment to local communities to ensure that local amenities are protected where possible, environmental effects are minimised, and local employment opportunities and community benefit funds are provided to maximise local benefits.</p>
-    </div>
-</div>
 <div style="padding-top:5%; background-color:white; margin-bottom:10%; text-align:center; position:relative;">
     <a href="www.itpenergised.com/"><img style="height: 47px; width:200px;"src="{% static 'logo2.png' %}"></a><br><br>
     <ul id="footer_nav"style="list-style:none;display:inline-flex;">
