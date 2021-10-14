@@ -268,6 +268,25 @@ ul#myNavbar li a:hover{
   text-decoration: none;
 }
 
+#dropdown_eia{
+  list-style:none; 
+  color:#646464;
+  display:none;
+  font-size: 13px;
+}
+
+
+#dropdown_eia > li{
+  margin-top: 6px;
+}
+
+#dropdown_eia li a:hover{
+  color: white;
+}
+
+#dropdown_eia li a{
+  color:#646464;
+}
 #nts:hover{
   color: rgba(195, 207, 244, 1);
   text-decoration: underline;
