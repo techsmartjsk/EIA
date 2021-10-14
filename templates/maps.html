@@ -6,15 +6,19 @@
     <div id="sidebar-left" class="sidebar-container" style="height:100%;">
     <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
     {% for t in titles%}
-        <div class="sidebar-item st-1">
         {% if forloop.counter < 9 %}
+            <div class="sidebar-item st-1">
                 <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
+            </div>
         {% elif forloop.counter == 9%}
+            <div class="sidebar-item st-1">
                 <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
+            </div>
         {% else %}
+            <div class="sidebar-item st-1">
                 <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
+            </div>        
         {% endif %}
-        </div>
     {% endfor %}
     <img style="width: 25px;
     height: 25px;
