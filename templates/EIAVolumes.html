@@ -39,7 +39,7 @@
         {% for v in volume_info %}
             <div style="margin-top:10px;">
                 <a target="_blank" href="{{ v.link }}"style="color:#505050; font-size:22px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}
-                <span></span></a>
+                <span style="float:right; text-decoration:underline;">Corresponding NTS Section</span></a>
                 <hr>
             </div>
         {% endfor %}
