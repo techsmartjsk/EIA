@@ -27,29 +27,19 @@
         {% endif %}
         </div>
     {% endfor %}
-    </div> 
-    <div id="about"style="height:100%;background-color: #e4eef8; margin-right:300px;" >
-        <img src="{% static 'nts_icon.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
-        <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Non Technical Summary</h1><br/>
-        <hr>
-        <br/>
-        <div> 
-            <p style="font-size:18px;color:#646464;">This document is a Non-Technical Summary (NTS) of the Sallachy Wind Farm Environmental Impact Assessment (EIA) Report which supports the application by WKN GmbH (the Applicant) for the development of a wind farm (the Proposed Development) in the Scottish Highlands. <br/> <br/>The Applicant is preparing an application for the construction, operation and decommissioning of the Proposed Development, located approximately 18 km north-west of Lairg on the shores of Loch Shin. Planning permission for the Proposed Development is being sought through an application to The Highland Council for planning permission under the Town and Country Planning (Scotland) Act 1997 (as amended) (Scottish Government, 1997). <br/><br/>Since the Proposed Development was first introduced to the local community in 2008, the Applicant has engaged closely with the local community and sought to ensure that any changes to accommodate local representations and responses are incorporated where possible. All of the Applicant’s projects are developed with a strong commitment to local communities to ensure that local amenities are protected where possible, environmental effects are minimised, and local employment opportunities and community benefit funds are provided to maximise local benefits.</p>
-        </div>
     </div>  
     <div id="about" style="height:100%;background-color: #e4eef8; margin-right:300px;" >
-        <img src="{% static 'nts_icon.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
-                <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Non Technical Summary</h1><br/>
+        <img src="{% static 'eia_green_icon.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
+        <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Non Technical Summary</h1><br/>
+        <hr>
+        <span style="font-size:25px;font-weight: 600; margin-top:25px;color:#646464;">Volume 1: Chapters</span>
+        <hr>
+        {% for v in volume_info %}
+            <div style="margin-top:10px;">
+                <a target="_blank" href="{{ v.link }}"style="color:#505050; font-size:22px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:16px; margin-left:20px;"class="fas fa-download"></i></a>
                 <hr>
-                <h1 style="font-size:25px;font-weight: 600; margin-top:25px;color:#646464;">Non Technical Summary</h1><br/>
-                <hr>
-                <br/>
-                {% for v in volume_info %}
-                    <div style="margin-top:10px;">
-                        <a target="_blank" href="{{ v.link }}"style="color:#505050; font-size:22px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:16px; margin-left:20px;"class="fas fa-download"></i></a>
-                        <hr>
-                    </div>
-                {% endfor %}
+            </div>
+        {% endfor %}
     </div>
 </div>
 <div style="padding-top:5%;  margin-bottom:10%; position:relative; text-align:center; width:100%;">
