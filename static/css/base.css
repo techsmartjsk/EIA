@@ -276,7 +276,7 @@ ul#myNavbar li a:hover{
 }
 
 .activeMenu{
-  display:block;
+  display:inline-block !important;
 }
 
 
@@ -644,5 +644,5 @@ ul#menu a{
 }
 
 .white{
-  color: white;
+  color: white !important;
 }
