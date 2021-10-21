@@ -15,15 +15,15 @@
                 <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}{% if eia_menu == 'true' %}active{% endif %}" style="height:fit-content;">
                     <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px; width:100%;">{{ t.heading }}<i id="dropdown" style="float:right;"class="fas fa-caret-down"></i></span></a>
                     <ul class="{% if eia_menu == 'true' %}activeMenu{% endif %}" id="dropdown_eia">
-                        <li><a href="/EIA/Land">Landscape and Visual</a></li>
-                        <li><a href="/EIA/Eco">Ecology</a></li>
-                        <li><a href="/EIA/Ornithology">Ornithology</a></li>
-                        <li><a href="/EIA/Noise">Noise</a></li>
-                        <li><a href="/EIA/ArAndCul">Archaeology & Cultural Heritage</a></li>
-                        <li><a href="/EIA/AccTra">Access, Traffic and Transport</a></li>
-                        <li><a href="/EIA/Hydro">Hydrology, Hydrogeology, Geology & Soils</a></li>
-                        <li><a href="/EIA/Socio">Socio-economics, Recreation & Tourism</a></li>
-                        <li><a href="/EIA/Aviation">Aviation  &  Radar,  Telecommunications,  Climate  Change  and  Shadow Flicker</a></li>
+                        <li><a class="{% if title == 'Land' %}white{% endif %}" href="/EIA/Land">Landscape and Visual</a></li>
+                        <li><a class="{% if title == 'Eco' %}white{% endif %}" href="/EIA/Eco">Ecology</a></li>
+                        <li><a class="{% if title == 'Ornithology' %}white{% endif %}" href="/EIA/Ornithology">Ornithology</a></li>
+                        <li><a class="{% if title == 'Noise' %}white{% endif %}" href="/EIA/Noise">Noise</a></li>
+                        <li><a class="{% if title == 'ArAndCul' %}white{% endif %}" href="/EIA/ArAndCul">Archaeology & Cultural Heritage</a></li>
+                        <li><a class="{% if title == 'AccTra' %}white{% endif %}" href="/EIA/AccTra">Access, Traffic and Transport</a></li>
+                        <li><a class="{% if title == 'Hydro' %}white{% endif %}" href="/EIA/Hydro">Hydrology, Hydrogeology, Geology & Soils</a></li>
+                        <li><a class="{% if title == 'Socio' %}white{% endif %}" href="/EIA/Socio">Socio-economics, Recreation & Tourism</a></li>
+                        <li><a class="{% if title == 'Aviation' %}white{% endif %}" href="/EIA/Aviation">Aviation  &  Radar,  Telecommunications,  Climate  Change  and  Shadow Flicker</a></li>
                     </ul>
                 </div>
             {% else %}
