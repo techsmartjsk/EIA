@@ -94,7 +94,7 @@ sidebar_close_button.addEventListener("click",function(){
 dropdown.addEventListener("click",function(event){
     event.preventDefault();
     if(dropdown_eia.style.display == "none"){
-        dropdown_eia.style.display ="block";
+        dropdown_eia.style.display ="block !important";
     }else{
         dropdown_eia.style.display ="none";
     }
