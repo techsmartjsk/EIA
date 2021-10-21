@@ -4,7 +4,7 @@
 {% block content %}
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow-x:hidden">
     <button style="top:2.5% !important; margin-left:1.5%; font-size:20px; width:8.5%;" onclick="MenuToggleFunction()" id="menu_top"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
-    <div style="float:left;" id="sidebar-left" class="sidebar-container">
+    <div style="float:left;overflow-x:hidden;" id="sidebar-left" class="sidebar-container">
         <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
         {% for t in titles%}
             {% if forloop.counter < 9 %}
@@ -15,7 +15,6 @@
                 <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}{% if eia_menu == 'true' %}active{% endif %}" style="height:fit-content;">
                     <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px; width:100%;">{{ t.heading }}<i id="dropdown" style="float:right;"class="fas fa-caret-down"></i></span></a>
                     <ul class="{% if eia_menu == 'true' %}activeMenu{% endif %}" id="dropdown_eia">
-                    <ul id="dropdown_eia">
                         <li><a href="/contents/Land">Landscape and Visual</a></li>
                         <li><a href="/contents/Eco">Ecology</a></li>
                         <li><a href="/contents/Ornithology">Ornithology</a></li>
@@ -25,7 +24,6 @@
                         <li><a href="/contents/Hydro">Hydrology, Hydrogeology, Geology & Soils</a></li>
                         <li><a href="/contents/Socio">Socio-economics, Recreation & Tourism</a></li>
                         <li><a href="/contents/Aviation">Aviation  &  Radar,  Telecommunications,  Climate  Change  and  Shadow Flicker</a></li>
-                </ul>
                     </ul>
                 </div>
             {% else %}
