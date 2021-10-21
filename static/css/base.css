@@ -276,7 +276,7 @@ ul#myNavbar li a:hover{
 }
 
 .activeMenu{
-  display:inline-block !important;
+  display:inline-block;
 }
 
 
