@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<div style="position:relative; min-height:100%; width:100%; border-bottom: 2px solid #f3f6fd;overflow-x:hidden">
     <div style="height:100%; margin-right:300px; margin-left:100px;" >
         <img src="{% static 'light_grey.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
         <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Contact</h1><br/>
@@ -10,15 +11,16 @@
             <p style="font-size:18px;color:#646464;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
     </div> 
-    <div style="padding-top:5%; background-color:white; margin-bottom:10%; text-align:center; position:relative;">
-        <a href="www.itpenergised.com/"><img style="height: 47px; width:200px;"src="{% static 'logo2.png' %}"></a><br><br>
-        <ul id="footer_nav"style="list-style:none;display:inline-flex;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/maps">Non Technical Summary</a></li>
-            <li><a href="/volumes/1">Environmental Impact Assessment</a></li>
-            <li><a href="/disclaimer">Disclaimer</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-        <p>Copyright and All Rights Reserved Information here</p>
-    </div>
+</div>
+<div style="padding-top:5%; background-color:white; margin-bottom:10%; text-align:center; position:relative;">
+    <a href="www.itpenergised.com/"><img style="height: 47px; width:200px;"src="{% static 'logo2.png' %}"></a><br><br>
+    <ul id="footer_nav"style="list-style:none;display:inline-flex;">
+        <li><a href="/">Home</a></li>
+        <li><a href="/maps">Non Technical Summary</a></li>
+        <li><a href="/volumes/1">Environmental Impact Assessment</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+    <p>Copyright and All Rights Reserved Information here</p>
+</div>
 {% endblock content %}
