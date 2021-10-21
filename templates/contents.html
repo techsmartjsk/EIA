@@ -12,7 +12,7 @@
                     <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
                 </div>
             {% elif forloop.counter == 9%}
-                <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}" style="height:fit-content;">
+                <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}{% if eia_menu == 'true' %}active{% endif %}" style="height:fit-content;">
                     <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px; width:100%;">{{ t.heading }}<i id="dropdown" style="float:right;"class="fas fa-caret-down"></i></span></a>
                     <ul id="dropdown_eia">
                         <li ><a href="/contents/noise">Noise</a></li>

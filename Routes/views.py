@@ -53,11 +53,13 @@ def contents(request,title):
         {'name':'EIA','heading':'EIA'},
         {'name':'Benefits','heading':'Benefits'},
         {'name':'Conclusion','heading':'Conclusion'}]
-
+    if(title == 'noise'):
+        context['eia_menu'] = 'true'
     info = Contents.objects.filter(Heading__contains = title)
     context['info'] = info
     context['title'] = title
     context['nav'] = 'nts'
+    context['eia_menu'] = 'false'
 
     return render(
         request,
