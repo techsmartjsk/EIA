@@ -53,7 +53,7 @@ def contents(request,title):
         {'name':'EIA','heading':'EIA'},
         {'name':'Benefits','heading':'Benefits'},
         {'name':'Conclusion','heading':'Conclusion'}]
-    if(title == 'noise'):
+    if(title == 'Noise'):
         context['eia_menu'] = 'true'
     else:
         context['eia_menu'] = 'false'
