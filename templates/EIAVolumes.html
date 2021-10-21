@@ -3,7 +3,7 @@
 
 {% block content %}
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto; padding-bottom:5%; overflow-x:hidden;">
-    <div style="float:left;" id="sidebar-left" class="sidebar-container">
+    <div style="float:left;background-color:#ebf0e1;" id="sidebar-left" class="sidebar-container eia_sidebar">
         <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
     {% for i in list %}
         <div class="sidebar-item st-1">
@@ -16,7 +16,7 @@
     {% endfor %}
     </div> 
 
-    <div style="float:left;" id="sidebar-left-small" class="sidebar-container">
+    <div style="float:left;background-color:#ebf0e1;" id="sidebar-left-small" class="sidebar-container eia_sidebar">
         <img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px; margin-bottom:20px;" src="{% static 'menu_left_closed.png' %}">
     {% for i in list %}
         <div class="sidebar-item st-1 sidebar_small">
@@ -32,11 +32,13 @@
         <img src="{% static 'eia_green_icon.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
         <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Environmental Impact Assessment Report</h1><br/>
         <hr>
+        <br/>
         <span style="font-size:25px;margin-top:25px;color:#646464;">Volume 1: Chapters</span>
         <hr>
         {% for v in volume_info %}
             <div style="margin-top:10px;">
-                <a target="_blank" href="{{ v.link }}"style="color:#505050; font-size:22px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}<i style="font-size:16px; margin-left:20px;"class="fas fa-download"></i></a>
+                <a target="_blank" href="{{ v.link }}"style="color:#505050; font-size:22px; text-decoration:none;" download>{{ forloop.counter }}. {{ v.name }}
+                <span></span></a>
                 <hr>
             </div>
         {% endfor %}
