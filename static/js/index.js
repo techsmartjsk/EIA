@@ -14,7 +14,7 @@ var styles = {
     "height": "100%",
     "width": "65px",
     "max-width": "65px",
-    "background-color": "#f5faff",
+    "background-color": "#ebf0e1",
     "display": "flex",
     "flex-direction": "column",
     "padding": "1.5% 0",
