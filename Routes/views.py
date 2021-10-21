@@ -99,3 +99,8 @@ def MapFullScreen(request):
         return render(request,'MapFullScreen.html',{
             'id': request.POST['image'],
         })
+
+def Contact(request):
+    return render(request,'contact.html',{
+        'nav':'contact',
+    })

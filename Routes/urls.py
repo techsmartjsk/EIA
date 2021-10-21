@@ -10,4 +10,5 @@ urlpatterns = [
     path('disclaimer/',views.Disclaimer,name='Disclaimer'),
     path('IMAGE',views.ImageFullScreen,name='ImageFullScreen'),
     path('MAP',views.MapFullScreen,name='MapFullScreen'),
+    path('contact/',views.Contact,name="contact"),
 ]
