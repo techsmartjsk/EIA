@@ -67,6 +67,32 @@ def contents(request,title):
         'contents.html',context
     )   
 
+def EIA_Contents(request,title):
+    context = {}
+    context['titles'] = [
+        {'name':'Abbreviations','heading':'Abbreviations'},
+        {'name':'Background','heading':'Background'},
+        {'name':'Purpose','heading':'Purpose'},
+        {'name':'Availability','heading':'Availability'},
+        {'name':'SiteLocation','heading':'Site Location and Description'},
+        {'name':'SiteDesign','heading':'Site Selection and Design'},
+        {'name':'Description','heading':'Description'},
+        {'name':'Consultation','heading':'Consultation'},
+        {'name':'EIA','heading':'EIA'},
+        {'name':'Benefits','heading':'Benefits'},
+        {'name':'Conclusion','heading':'Conclusion'}]
+        
+    info = Contents.objects.filter(Heading__contains = title)
+    context['info'] = info
+    context['title'] = title
+    context['nav'] = 'nts'
+    context['eia_menu'] = 'true'
+
+    return render(
+        request,
+        'contents.html',context
+    )  
+
 def Volume(request,v_id):
     context={}
 

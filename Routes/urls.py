@@ -6,6 +6,7 @@ urlpatterns = [
     path('maps/',views.maps,name='maps'),
     path('about/',views.about,name='about'),
     path('contents/<str:title>',views.contents,name='contents'),
+    path('EIA/<str:title>',views.EIA_Contents,name="EIA_Contents"),
     path('volumes/<int:v_id>',views.Volume,name='Volumes'),
     path('disclaimer/',views.Disclaimer,name='Disclaimer'),
     path('IMAGE',views.ImageFullScreen,name='ImageFullScreen'),
