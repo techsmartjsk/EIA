@@ -646,3 +646,8 @@ ul#menu a{
 .white{
   color: white !important;
 }
+
+.eia_sidebar_item:hover{
+  background-color: #82b476 !important;
+  color: white !important;
+}

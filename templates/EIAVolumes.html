@@ -3,10 +3,10 @@
 
 {% block content %}
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto; padding-bottom:5%; overflow-x:hidden;">
-    <div style="float:left;background-color:#ebf0e1;" id="sidebar-left" class="sidebar-container eia_sidebar">
+    <div style="float:left;background-color:#ebf0e1;" id="sidebar-left" class="sidebar-container">
         <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
     {% for i in list %}
-        <div class="sidebar-item st-1">
+        <div class="sidebar-item st-1 eia_sidebar_item">
         {% if forloop.counter == 1 %}
             <a href="{{ i.link }}" class="sidebar-title">{{ i.heading }}</a>
         {% else %}
@@ -16,10 +16,10 @@
     {% endfor %}
     </div> 
 
-    <div style="float:left;background-color:#ebf0e1;" id="sidebar-left-small" class="sidebar-container eia_sidebar">
+    <div style="float:left;background-color:#ebf0e1;" id="sidebar-left-small" class="sidebar-container">
         <img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px; margin-bottom:20px;" src="{% static 'menu_left_closed.png' %}">
     {% for i in list %}
-        <div class="sidebar-item st-1 sidebar_small">
+        <div class="sidebar-item st-1 sidebar_small eia_sidebar_item">
         {% if forloop.counter == 1 %}
             <a href="{{ i.link }}" class="sidebar-title">0{{ forloop.counter }}.</a>
         {% else %}
@@ -29,6 +29,7 @@
     {% endfor %}
     </div>  
     <div id="about">
+        <a><img style="width: 22px;height: 29px;padding: 0 1px 4px 3px;"src="{% static 'page_icon.png' %}"><span style="font-size: 14px; margin-left:4px;">Corresponding EIA Report  Chapter<span></a>
         <img src="{% static 'eia_green_icon.png' %}" style="width: 74px; height:74px;margin: 10px 9px 7px 0;"><br/>
         <h1 style="font-size:30px;font-weight: 600; margin-top:25px;color:#646464;">Environmental Impact Assessment Report</h1><br/>
         <hr>
