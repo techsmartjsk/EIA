@@ -96,11 +96,11 @@ def EIA_Contents(request,title):
 def Volume(request,v_id):
     context={}
 
-    context['list'] = [{ 'id': 1,'heading':'Volume 1 : Chapters','link':'/volumes/1'},
-    {'id': 2,'heading':'Volume 2 : Figures','link':'https://www.dropbox.com/sh/rn9k2jk1s7dawx7/AABMut9Svk-xK67U0JU0pKY-a?dl=1'},
-    {'id': 3,'heading':'Volume 3 : LVIA NatureScot Figures','link':'https://www.dropbox.com/s/cnzlm29lt7dxvz3/Volume3_Sallachy_NatureScot_VPS_HighRes_Final_forDoubleSidedPrinting.pdf?dl=1'},
-    {'id': 4,'heading':'Volume 4 : LVIA THC Figures','link':'https://www.dropbox.com/s/vbahd3uzuyku75t/Volume4_Sallachy_THC_VPS_HighRes_Final.pdf?dl=1'},
-    {'id': 5,'heading':'Volume 5 : Appendices','link':'https://www.dropbox.com/sh/mqa0ptushfqtc4n/AABqWq3cOXvyG21E6JkoMs1ua?dl=1'}]
+    context['list'] = [{ 'id': 1,'heading':'01 : Chapters','link':'/volumes/1'},
+    {'id': 2,'heading':'02 : Figures','link':'https://www.dropbox.com/sh/rn9k2jk1s7dawx7/AABMut9Svk-xK67U0JU0pKY-a?dl=1'},
+    {'id': 3,'heading':'03 : LVIA NatureScot Figures','link':'https://www.dropbox.com/s/cnzlm29lt7dxvz3/Volume3_Sallachy_NatureScot_VPS_HighRes_Final_forDoubleSidedPrinting.pdf?dl=1'},
+    {'id': 4,'heading':'04 : LVIA THC Figures','link':'https://www.dropbox.com/s/vbahd3uzuyku75t/Volume4_Sallachy_THC_VPS_HighRes_Final.pdf?dl=1'},
+    {'id': 5,'heading':'05 : Appendices','link':'https://www.dropbox.com/sh/mqa0ptushfqtc4n/AABqWq3cOXvyG21E6JkoMs1ua?dl=1'}]
 
     volume_info = Volumes.objects.filter(volume__contains = v_id).order_by('id')
 
