@@ -275,6 +275,10 @@ ul#myNavbar li a:hover{
   font-size: 13px;
 }
 
+.activeMenu{
+  display:block;
+}
+
 
 #dropdown_eia > li{
   margin-top: 6px;
