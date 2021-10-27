@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow:auto; padding-bottom:5%; overflow-x:hidden;">
+    <div style="float:left;background-color:#ebf0e1;" id="sidebar-left" class="sidebar-container">
+        <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
+    {% for i in list %}
+        <div class="sidebar-item st-1 eia_sidebar_item">
+        {% if forloop.counter == 1 %}
+            <a href="{{ i.link }}" class="sidebar-title">{{ i.heading }}</a>
+        {% else %}
+            <a href="{{ i.link }}" target="_blank" class="sidebar-title">{{ i.heading }}</a>
+        {% endif %}
+        </div>
+    {% endfor %}
+    </div> 
+
+    <div style="float:left;background-color:#ebf0e1 !important;" id="sidebar-left-small" class="sidebar-container">
+        <img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px; margin-bottom:20px;" src="{% static 'menu_left_closed.png' %}">
+    {% for i in list %}
+        <div class="sidebar-item st-1 sidebar_small eia_sidebar_item">
+        {% if forloop.counter == 1 %}
+            <a href="{{ i.link }}" class="sidebar-title">0{{ forloop.counter }}.</a>
+        {% else %}
+            <a href="{{ i.link }}" target="_blank" class="sidebar-title">0{{ forloop.counter }}.</a>
+        {% endif %}
+        </div>
+    {% endfor %}
+    </div>  
+    {% for i in info %}
+        <div id="about"style="float:left;" class="content">
+            <a><img style="width: 22px;height: 29px;padding: 0 1px 4px 3px;"src="{% static 'page_icon.png' %}"><span style="font-size: 14px; margin-left:4px;">Corresponding EIA Report  Chapter<span></a>
+            <h2 style="color:black;font-size:25px; margin-top:15px;">{{ i.Title }}</h2>
+                {{ i.Content | safe }}
+        </div>
+    {% endfor%}
+    {% for i in image_ref %}
+        <div id="image_content">
+        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:5%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
+        <form action="/FullScreen/{{ i.name }}" method="POST" target="_blank">
+        {% csrf_token %}
+            <input name="image" value="{{ i.image }}" hidden>
+            <button type="image" alt="submit" style="width:150px; height:30px; position:absolute; z-index:999; background-color: #fff; border: solid 1px #ebebeb;border-radius: 15px;margin-left:15%;margin-top:1.5%;"><i style="margin-right:4px;"class="fas fa-plus"></i>Open in new tab</button>
+        <form>
+            <img style="height:100%;" id="bgimage" src="/static/img/images/{{ i.image }}">
+        </div>
+    {% endfor %}
+</div>
+<div style="padding-top:5%;  margin-bottom:10%; position:relative; text-align:center; width:100%;">
+    <a href="www.itpenergised.com/"><img style="height: 47px; width:200px;"src="{% static 'logo2.png' %}"></a>
+    {% comment %} <p style="text-align:center;font-size:1vw;padding-left:20%; padding-top: 3%; padding-right:20%; font-family: 'Lato', sans-serif;">] Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] </p> {% endcomment %}
+</div>
+<script src="{% static 'js/maps.js' %}" type="text/javascript"></script>
+
+{% endblock content %}

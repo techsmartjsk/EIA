@@ -1,4 +1,4 @@
-from Routes.models import Contents, Volumes
+from Routes.models import Contents, ImageReferences, Volumes, EIA_Contents
 from django.shortcuts import render
 
 def index(request):
@@ -133,3 +133,31 @@ def Contact(request):
     return render(request,'contact.html',{
         'nav':'contact',
     })
+
+
+def Chapters(request,title):
+    context = {}
+
+    context['list'] = [{ 'id': 1,'heading':'01 : Chapters','link':'/volumes/1'},
+    {'id': 2,'heading':'02 : Figures','link':'https://www.dropbox.com/sh/rn9k2jk1s7dawx7/AABMut9Svk-xK67U0JU0pKY-a?dl=1'},
+    {'id': 3,'heading':'03 : LVIA NatureScot Figures','link':'https://www.dropbox.com/s/cnzlm29lt7dxvz3/Volume3_Sallachy_NatureScot_VPS_HighRes_Final_forDoubleSidedPrinting.pdf?dl=1'},
+    {'id': 4,'heading':'04 : LVIA THC Figures','link':'https://www.dropbox.com/s/vbahd3uzuyku75t/Volume4_Sallachy_THC_VPS_HighRes_Final.pdf?dl=1'},
+    {'id': 5,'heading':'05 : Appendices','link':'https://www.dropbox.com/sh/mqa0ptushfqtc4n/AABqWq3cOXvyG21E6JkoMs1ua?dl=1'}]
+
+    context['info'] = EIA_Contents.objects.filter(Heading__contains = title)
+    context['nav'] = 'chapters'
+    return render(request,'chapters.html',context)
+
+def ChaptersWithImage(request,title,image_ref):
+    context = {}
+
+    context['list'] = [{ 'id': 1,'heading':'01 : Chapters','link':'/volumes/1'},
+    {'id': 2,'heading':'02 : Figures','link':'https://www.dropbox.com/sh/rn9k2jk1s7dawx7/AABMut9Svk-xK67U0JU0pKY-a?dl=1'},
+    {'id': 3,'heading':'03 : LVIA NatureScot Figures','link':'https://www.dropbox.com/s/cnzlm29lt7dxvz3/Volume3_Sallachy_NatureScot_VPS_HighRes_Final_forDoubleSidedPrinting.pdf?dl=1'},
+    {'id': 4,'heading':'04 : LVIA THC Figures','link':'https://www.dropbox.com/s/vbahd3uzuyku75t/Volume4_Sallachy_THC_VPS_HighRes_Final.pdf?dl=1'},
+    {'id': 5,'heading':'05 : Appendices','link':'https://www.dropbox.com/sh/mqa0ptushfqtc4n/AABqWq3cOXvyG21E6JkoMs1ua?dl=1'}]
+
+    context['info'] = EIA_Contents.objects.filter(Heading__contains = title)
+    context['image_ref'] = ImageReferences.objects.filter(name__contains = image_ref)
+    context['nav'] = 'chapters'
+    return render(request,'chapters.html',context)
