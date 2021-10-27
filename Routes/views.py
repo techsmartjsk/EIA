@@ -67,7 +67,7 @@ def contents(request,title):
         'contents.html',context
     )   
 
-def EIA_Contents(request,title):
+def EIA_Content(request,title):
     context = {}
     context['titles'] = [
         {'name':'Abbreviations','heading':'Abbreviations'},
