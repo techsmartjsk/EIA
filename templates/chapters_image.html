@@ -38,12 +38,9 @@
     {% for i in image_ref %}
         <div id="image_content">
         <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:5%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
-        <form action="/FullScreen/{{ i.name }}" method="GET" target="_blank">
-        {% csrf_token %}
-            <input name="image" value="{{ i.image }}" hidden>
-            <button type="image" alt="submit" style="width:150px; height:30px; position:absolute; z-index:999; background-color: #fff; border: solid 1px #ebebeb;border-radius: 15px;margin-left:15%;margin-top:1.5%;"><i style="margin-right:4px;"class="fas fa-plus"></i>Open in new tab</button>
-        <form>
-            <img style="height:100%;" id="bgimage" src="/static/img/images/{{ i.image }}">
+
+        <a href="/FullScreen/{{ i.name }}" style="width:150px; height:30px; position:absolute; z-index:999; background-color: #fff; border: solid 1px #ebebeb;border-radius: 15px;margin-left:15%;margin-top:1.5%;text-decoartion:none; color:black;"><i style="margin-right:4px;"class="fas fa-plus"></i>Open in new tab</a>
+        <img style="height:100%;" id="bgimage" src="/static/img/images/{{ i.image }}">
         </div>
     {% endfor %}
 </div>
