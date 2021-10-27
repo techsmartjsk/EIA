@@ -14,4 +14,5 @@ urlpatterns = [
     path('contact/',views.Contact,name="contact"),
     path('Chapters/<str:title>',views.Chapters,name="Chapters"),
     path('Chapters/<str:title>/<str:image_ref>',views.ChaptersWithImage,name="ChaptersWithImage"),
+    path('FullScreen/<str:name>',views.FullScreen,name="FullScreen"),
 ]
