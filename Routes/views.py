@@ -160,7 +160,7 @@ def ChaptersWithImage(request,title,image_ref):
     context['info'] = EIA_Contents.objects.filter(Heading__contains = title)
     context['image_ref'] = ImageReferences.objects.filter(name__contains = image_ref)
     context['nav'] = 'chapters'
-    return render(request,'chapters.html',context)
+    return render(request,'chapters_image.html',context)
 
 
 def FullScreen(request,name):
