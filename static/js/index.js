@@ -43,7 +43,7 @@ var dropdown_eia = document.getElementById("dropdown_eia");
 
 if(document.body.contains(image_collapse)){
     image_collapse.addEventListener("click",function(){
-        if(image_content.style.width == '30%'){
+        if(image_content.style.width == '40%'){
             if(document.body.contains(bgimage)){
                 bgimage.style.width = "100%";
                 image_content.style.width = width - 250;
@@ -60,9 +60,9 @@ if(document.body.contains(image_collapse)){
             }
         }else{
             if(document.body.contains(bgimage)){
-                bgimage.style.width = "30%";
+                bgimage.style.width = "40%";
             }
-            image_content.style.width = "30%";
+            image_content.style.width = "40%";
             image_content.style.marginLeft = "0px";
             image_content.style.float = "right";
             content.style.display = "block";
