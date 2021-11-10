@@ -57,6 +57,7 @@ if(document.body.contains(image_collapse)){
             }else{
                 if(document.body.contains(lvia_sidebar)){
                     lvia_sidebar.style.marginLeft = "250px";
+                    lvia_sidebar.style.width = width - 250;
                 }
                 image_content.style.width = width - 250;
                 image_content.style.marginLeft = "250px";
