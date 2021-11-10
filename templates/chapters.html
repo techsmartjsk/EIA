@@ -35,14 +35,16 @@
                 {{ i.Content | safe }}
         </div>
         {% if i.Title == 'LVIA' %}
+        <div id="image_content">
+        <img id="image_collapse" style="padding-left:10px;width:82px;position:absolute; z-index:999; margin-left:5%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
         <div id="sidebar" class="sidebar collapsed">
         <!-- Nav tabs -->
         <div class="sidebar-tabs">
             <ul role="tablist">
                 <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
                 <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
-                <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
-                <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
+                {% comment %} <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+                <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li> {% endcomment %}
             </ul>
 
             <ul role="tablist">
@@ -84,7 +86,7 @@
     </div>
 
     <div id="map" class="sidebar-map"></div>
-
+    </div>
     <a href="https://github.com/Turbo87/sidebar-v2/"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
