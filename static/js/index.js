@@ -43,6 +43,7 @@ var dropdown_eia = document.getElementById("dropdown_eia");
 
 // LVIA
 var lvia_sidebar = document.getElementById("sidebar");
+var lvia_map = document.getElementById("map");
 
 if(document.body.contains(image_collapse)){
     image_collapse.addEventListener("click",function(){
@@ -57,7 +58,7 @@ if(document.body.contains(image_collapse)){
             }else{
                 if(document.body.contains(lvia_sidebar)){
                     lvia_sidebar.style.marginLeft = "250px";
-                    lvia_sidebar.style.width = width - 250;
+                    lvia_map.style.width = width - 250;
                 }
                 image_content.style.width = width - 250;
                 image_content.style.marginLeft = "250px";
