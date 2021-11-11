@@ -102,7 +102,7 @@ def Volume(request,v_id):
     {'id': 4,'heading':'04 : LVIA THC Figures','link':'https://www.dropbox.com/s/vbahd3uzuyku75t/Volume4_Sallachy_THC_VPS_HighRes_Final.pdf?dl=1'},
     {'id': 5,'heading':'05 : Appendices','link':'https://www.dropbox.com/sh/mqa0ptushfqtc4n/AABqWq3cOXvyG21E6JkoMs1ua?dl=1'}]
 
-    volume_info = Volumes.objects.filter(volume__contains = v_id).order_by('id')
+    volume_info = Volumes.objects.all().order_by('volume')
 
     context['volume_info'] = volume_info
     context['nav'] = 'eia'

@@ -9,7 +9,7 @@
  * @param {string} [options.position=left] - Position of the sidebar: 'left' or 'right'
  * @see L.control.sidebar
  */
-L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
+ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
     includes: (L.Evented.prototype || L.Mixin.Events),
 
     options: {
