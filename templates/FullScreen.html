@@ -1,4 +1,5 @@
-{% extends 'base.html' %}
+{% load static %}
+
 {% if name == "LVIA" %}
 <div id="sidebar" style="margin-left:60%;"class="sidebar collapsed">
 <!-- Nav tabs -->
@@ -18,6 +19,9 @@
 </div>
 
 <div id="map" style="height:100%;"class="sidebar-map"></div>
+<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+<script src="{% static 'js/leaflet-sidebar.js' %}"></script>
+<script src="{% static 'js/lvia.js' %}"></script>
 {% else %}
 {% for i in Ref %}
 <div style="display:flex;">
