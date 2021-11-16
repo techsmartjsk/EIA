@@ -1,3 +1,23 @@
+{% if name=="LVIA" %}
+<div id="sidebar" style="margin-left:60%;"class="sidebar collapsed">
+<!-- Nav tabs -->
+    <div class="sidebar-tabs">
+        <ul role="tablist">
+            <li><a href="#map-marker" role="tab"><i class="fa fa-map-marker"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="sidebar-content">
+        <div class="sidebar-pane" id="map-marker">
+            <h1 class="sidebar-header" id="markerHeader">Viewpoint Pane<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            <p class="lorem" id="markerPara">No viewpoint selected.</p>
+        </div>
+    </div>
+</div>
+
+<div id="map" style="height:100%;"class="sidebar-map"></div>
+{% else %}
 {% for i in Ref %}
 <div style="display:flex;">
     <img style="height:100%; width:50%; padding:10px;" id="bgimage" src="/static/img/images/{{ i.image }}">
@@ -6,3 +26,4 @@
     </div>
 </div>
 {% endfor %}
+{% endif %}

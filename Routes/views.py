@@ -165,5 +165,6 @@ def ChaptersWithImage(request,title,image_ref):
 
 def FullScreen(request,name):
     context = {}
+    context['name'] = name
     context['Ref'] = ImageReferences.objects.filter(name__contains = name)
     return render(request,'FullScreen.html',context)
