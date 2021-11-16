@@ -1,27 +1,59 @@
 {% load static %}
 
 {% if name == "LVIA" %}
-<div id="sidebar" style="margin-left:60%;"class="sidebar collapsed">
-<!-- Nav tabs -->
-    <div class="sidebar-tabs">
-        <ul role="tablist">
-            <li><a href="#map-marker" role="tab"><i class="fa fa-map-marker"></i></a></li>
-        </ul>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-    <!-- Tab panes -->
-    <div class="sidebar-content">
-        <div class="sidebar-pane" id="map-marker">
-            <h1 class="sidebar-header" id="markerHeader">Viewpoint Pane<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            <p class="lorem" id="markerPara">No viewpoint selected.</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
+
+    <link rel="stylesheet" href="{% static 'css/leaflet-sidebar.css' %}" />
+    
+</head>
+<body>
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+
+                <li><a href="#map-marker" role="tab"><i class="fa fa-map-marker"></i></a></li>
+                <!-- <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
+        <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li> -->
+            </ul>
+
+            <!--<ul role="tablist">
+                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+            </ul> -->
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="map-marker">
+                <h1 class="sidebar-header" id="markerHeader">Viewpoint Pane<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <p class="lorem" id="markerPara">No viewpoint selected.</p>
+            </div>
         </div>
     </div>
-</div>
 
-<div id="map" style="height:100%;"class="sidebar-map"></div>
-<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-<script src="{% static 'js/leaflet-sidebar.js' %}"></script>
-<script src="{% static 'js/lvia.js' %}"></script>
+    <div id="map" class="sidebar-map"></div>
+
+    <!-- <a href="https://github.com/Turbo87/sidebar-v2/"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    -->
+
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="{% static 'js/leaflet-sidebar.js' %}"></script>
+
+    <script src="{% static 'js/lvia.js' %}">
+        
+    </script>
+</body>
+</html>
+
 {% else %}
 {% for i in Ref %}
 <div style="display:flex;">
