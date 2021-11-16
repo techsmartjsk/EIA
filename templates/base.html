@@ -71,13 +71,13 @@
           </a>
         </li>
         <li id="nts_li" class="{% if nav == 'nts'%}activeNTS{% endif %}">
-          <a href="/maps"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
+          <a href="/maps" style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
           <a href="/maps">
           Non Technical Summary
           </a>
         </li>
         <li class="{% if nav == 'eia'%}activeEIA{% endif %}" id="eia_li">
-          <a href="/volumes/1"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
+          <a href="/volumes/1" style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
           <a href="/volumes/1">
           EIA Report
           </a>

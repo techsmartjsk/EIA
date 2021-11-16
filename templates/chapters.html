@@ -35,33 +35,26 @@
                 {{ i.Content | safe }}
         </div>
         {% if i.Title == 'LVIA' %}
-        <div id="image_content">
+    <div id="image_content">
         <img id="image_collapse" style="padding-left:10px;width:82px;position:absolute; z-index:999; margin-left:10%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
         <div id="sidebar" style="margin-left:60%;"class="sidebar collapsed">
-        <!-- Nav tabs -->
-        <div class="sidebar-tabs">
-            <ul role="tablist">
+                <!-- Nav tabs -->
+                <div class="sidebar-tabs">
+                    <ul role="tablist">
+                        <li><a href="#map-marker" role="tab"><i class="fa fa-map-marker"></i></a></li>
+                    </ul>
+                </div>
 
-                <li><a href="#map-marker" role="tab"><i class="fa fa-map-marker"></i></a></li>
-                <!-- <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
-        <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li> -->
-            </ul>
-
-            <!--<ul role="tablist">
-                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
-            </ul> -->
+                <!-- Tab panes -->
+                <div class="sidebar-content">
+                    <div class="sidebar-pane" id="map-marker">
+                        <h1 class="sidebar-header" id="markerHeader">Viewpoint Pane<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                        <p class="lorem" id="markerPara">No viewpoint selected.</p>
+                    </div>
+                </div>
         </div>
 
-        <!-- Tab panes -->
-        <div class="sidebar-content">
-            <div class="sidebar-pane" id="map-marker">
-                <h1 class="sidebar-header" id="markerHeader">Viewpoint Pane<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-                <p class="lorem" id="markerPara">No viewpoint selected.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="map" style="height:100%;"class="sidebar-map"></div>
+        <div id="map" style="height:100%;"class="sidebar-map"></div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
