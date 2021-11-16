@@ -96,6 +96,11 @@ ul#myNavbar li a:hover{
   content: url("/static/nts_icon.png");
 }
 
+.activeEIA{
+  color:white;
+  background-color: #82af55 !important;
+}
+
 .activeEIA a{
   color: #82af55 !important;
 }

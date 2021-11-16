@@ -21,7 +21,7 @@
     {% for i in list %}
         <div class="sidebar-item st-1 sidebar_small eia_sidebar_item">
         {% if forloop.counter == 1 %}
-            <a href="{{ i.link }}" class="sidebar-title">0{{ forloop.counter }}.</a>
+            <a href="{{ i.link }}" class="sidebar-title activeEIA">0{{ forloop.counter }}.</a>
         {% else %}
             <a href="{{ i.link }}" target="_blank" class="sidebar-title">0{{ forloop.counter }}.</a>
         {% endif %}
