@@ -8,11 +8,11 @@
         <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
         {% for t in titles%}
             {% if forloop.counter < 9 %}
-                <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
+                <div class="sidebar-item st-1 {% if t.name == title %}activeItem{% endif %}">
                     <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
                 </div>
             {% elif forloop.counter == 9%}
-                <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}{% if eia_menu == 'true' %}active{% endif %}" style="height:fit-content;">
+                <div class="sidebar-item st-1 {% if t.name == title %}activeItem{% endif %}{% if eia_menu == 'true' %}activeItem{% endif %}" style="height:fit-content;">
                     <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.<span style="margin-left:10px; width:100%;">{{ t.heading }}<i id="dropdown" style="float:right;"class="fas fa-caret-down"></i></span></a>
                     <ul class="{% if eia_menu == 'true' %}activeMenu{% endif %}" id="dropdown_eia">
                         <li><a class="{% if title == 'Land' %}white{% endif %}" href="/EIA/Land">Landscape and Visual</a></li>
@@ -27,7 +27,7 @@
                     </ul>
                 </div>
             {% else %}
-                <div class="sidebar-item st-1 {% if t.name == title %}active{% endif %}">
+                <div class="sidebar-item st-1 {% if t.name == title %}activeItem{% endif %}">
                     <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.<span style="margin-left:10px;">{{ t.heading }}</span></a>
                 </div>        
             {% endif %}
@@ -43,11 +43,11 @@
     <img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px;"src="{% static 'menu_left_closed.png' %}">
     {% for t in titles%}
         {% if forloop.counter < 10 %}
-            <div class="sidebar-item st-1 sidebar_small {% if t.name == title %}active{% endif %}">
+            <div class="sidebar-item st-1 sidebar_small {% if t.name == title %}activeItem{% endif %}">
                 <a href="/contents/{{ t.name }}" class="sidebar-title">0{{ forloop.counter }}.</a>
             </div>
         {% else %}
-            <div class="sidebar-item st-1 sidebar_small {% if t.name == title %}active{% endif %}">
+            <div class="sidebar-item st-1 sidebar_small {% if t.name == title %}activeItem{% endif %}">
                 <a href="/contents/{{ t.name }}" class="sidebar-title">{{ forloop.counter }}.</a>
             </div>
         {% endif %}
