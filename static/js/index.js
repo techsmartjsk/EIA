@@ -102,11 +102,14 @@ sidebar_close_button.addEventListener("click",function(){
     content.style.marginLeft = "90px";
 });
 
-dropdown.addEventListener("click",function(event){
-    event.preventDefault();
-    if(dropdown_eia.style.display == "none"){
-        dropdown_eia.style.display ="block";
-    }else{
-        dropdown_eia.style.display ="none";
-    }
-})
+
+if(document.body.contains(dropdown)){
+    dropdown.addEventListener("click",function(event){
+        event.preventDefault();
+        if(dropdown_eia.style.display == "none"){
+            dropdown_eia.style.display ="block";
+        }else{
+            dropdown_eia.style.display ="none";
+        }
+    })
+}
