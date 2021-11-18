@@ -38,16 +38,15 @@
         <span style="font-size:25px;margin-top:25px;color:#646464;">Volume 1: Chapters</span>
         <hr>
         {% for v in volume_info %}
-            <div style="margin-top:10px;display:block;">
+            <div style="margin-top:10px;">
                 <a href="{{ v.link }}"style="color:#505050; font-size:22px; text-decoration:none;">{{ forloop.counter }}. {{ v.name }}
-                {% comment %} <span style="margin-left:20em; color:#646464; font-size:14px; text-decoration:underline;">Corresponding NTS Section</span><span style="float:right; color:#646464;font-size:14px; text-decoration:underline;">Download {% endcomment %}
+                <span style="margin-left:20em; color:#646464; font-size:14px; text-decoration:underline;">Corresponding NTS Section</span><span style="float:right; color:#646464;font-size:14px; text-decoration:underline;">Download
                 <img style="width: 25px;
                     height: 25px;
                     margin: 0px 0px 0px 20px;
                     padding: 0 1px 1px 0;"
                     src="{% static 'download_button.png' %}">
                 </span></a>
-                <a style="text-align:center; color:#646464; font-size:14px; text-decoration:underline;">Corresponding NTS Section</a>
                 <hr>
             </div>
         {% endfor %}
