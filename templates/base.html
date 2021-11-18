@@ -115,11 +115,27 @@
     </ul>
   </div>
 </nav>
+<div class="cookie-popup cookie-popup--short cookie-popup--dark">
+    <div>
+    For best experience open the application in Google Chrome <a style="text-decoration:underline;" onclick="openURL()">Open in Chrome</a>
+    </div>
+    <div class="cookie-popup-actions">
+      <button>Okay</button>
+    </div>
+  </div>
 {% block content %}{% endblock content %}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/2dcc255ddc.js" crossorigin="anonymous"></script>
 <script src="{% static 'js/index.js' %}"></script>
+<script type="text/javascript">
+   
+    function openURL() 
+    {
+         var shell = new ActiveXObject("WScript.Shell");
+         shell.run("Chrome https://eiasprintv4.herokuapp.com/");
+    }                 
+</script>
 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 <script src="{% static 'js/leaflet-sidebar.js' %}"></script>
 <script src="{% static 'js/lvia.js' %}"></script>
