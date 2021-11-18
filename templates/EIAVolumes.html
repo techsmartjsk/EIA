@@ -16,16 +16,18 @@
     {% endfor %}
     </div> 
 
-    <div style="float:left;background-color:#ebf0e1 !important;overflow-x:hidden;{% if nav == 'eia' %}activeVolume{% endif %}" id="sidebar-left-small" class="sidebar-container">
+    <div style="float:left;background-color:#ebf0e1 !important;overflow-x:hidden;" id="sidebar-left-small" class="sidebar-container">
         <img id="left_open_sidebar" style="width: 35px;height: 30px; margin-left:20px; margin-bottom:20px;" src="{% static 'menu_left_closed.png' %}">
     {% for i in list %}
-        <div class="sidebar-item st-1 sidebar_small eia_sidebar_item">
         {% if forloop.counter == 1 %}
-            <a href="{{ i.link }}" class="sidebar-title activeEIA">0{{ forloop.counter }}.</a>
+            <div class="sidebar-item st-1 sidebar_small eia_sidebar_item {% if nav == 'eia' %}activeVolume{% endif %}">
+                <a href="{{ i.link }}" class="sidebar-title activeEIA">0{{ forloop.counter }}.</a>
+            </div>
         {% else %}
-            <a href="{{ i.link }}" target="_blank" class="sidebar-title">0{{ forloop.counter }}.</a>
+            <div class="sidebar-item st-1 sidebar_small eia_sidebar_item {% if nav == 'eia' %}activeVolume{% endif %}">
+                <a href="{{ i.link }}" target="_blank" class="sidebar-title">0{{ forloop.counter }}.</a>
+            </div>
         {% endif %}
-        </div>
     {% endfor %}
     </div>  
     <div id="about" style="margin-right:100px;">
