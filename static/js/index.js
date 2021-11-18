@@ -65,6 +65,9 @@ var dropdown_eia = document.getElementById("dropdown_eia");
 var lvia_sidebar = document.getElementById("sidebar");
 var lvia_map = document.getElementById("map");
 
+//Popup
+var popup = document.getElementById("popup_");
+
 if(document.body.contains(image_collapse)){
     image_collapse.addEventListener("click",function(){
         if(image_content.style.width == '40%'){
@@ -169,4 +172,13 @@ on('.cookie-popup button', 'click', () => {
 /* popup init hanler */
 if (cookie('cookie-accepted') !== "true") {
   el('.cookie-popup').classList.add('cookie-popup--not-accepted');
+}
+
+
+function fnBrowserDetect(){     
+    let userAgent = navigator.userAgent;
+    
+    if(userAgent.match(/chrome|chromium|crios/i)){
+        popup.style.display = "none";
+    }       
 }
