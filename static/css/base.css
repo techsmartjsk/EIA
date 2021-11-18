@@ -452,6 +452,11 @@ small{
   color: #5a5a5a !important;
 }
 
+.activeVolume{
+  background-color: #82b476 !important;
+  color: white !important;
+}
+
 
 
 
