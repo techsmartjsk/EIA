@@ -1,8 +1,6 @@
 // init map, set world view?
 var map = L.map('map');
-if(document.body.contains(map)){
-    map.setView([51.2, 7], 9);
-}
+map.setView([51.2, 7], 9);
 
 //add basemap
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
