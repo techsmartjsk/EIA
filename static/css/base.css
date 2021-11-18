@@ -666,7 +666,7 @@ ul#menu a{
 /* COOKIE POPUP STYLES */
 
 .cookie-popup {
-  
+  z-index: 999999999;
   font-size: 0.875rem;
   display: flex;
   flex-wrap: wrap;
