@@ -170,3 +170,6 @@ def FullScreen(request,name):
     context['name'] = name
     context['Ref'] = ImageReferences.objects.filter(name__contains = name)
     return render(request,'FullScreen.html',context)
+
+def test(request):
+    return render(request,'loaderio-24e5de954e5362e9a5800406e174dc5b.txt',{})
