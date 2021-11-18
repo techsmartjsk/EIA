@@ -5,7 +5,7 @@
 <div style="position:relative; min-height:100%; border-bottom: 2px solid #f3f6fd;overflow-x:hidden">
     <button style="top:2.5% !important; margin-left:1.5%; font-size:20px; width:8.5%;" onclick="MenuToggleFunction()" id="menu_top"><i id="left-icon" class="fas fa-chevron-left"></i>Menu</button>
     <div style="float:left;overflow-x:hidden;" id="sidebar-left" class="sidebar-container">
-        <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
+        <img id="left_close_sidebar_nts" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
         {% for t in titles%}
             {% if forloop.counter < 9 %}
                 <div class="sidebar-item st-1 {% if t.name == title %}activeItem{% endif %}">
