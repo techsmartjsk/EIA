@@ -173,12 +173,9 @@ on('.cookie-popup button', 'click', () => {
 if (cookie('cookie-accepted') !== "true") {
   el('.cookie-popup').classList.add('cookie-popup--not-accepted');
 }
+  
+var userAgent = navigator.userAgent;
 
-
-function fnBrowserDetect(){     
-    let userAgent = navigator.userAgent;
-    
-    if(userAgent.match(/chrome|chromium|crios/i)){
-        popup.style.display = "none";
-    }       
-}
+if(userAgent.match(/chrome|chromium|crios/i)){
+    popup.style.display = "none";
+}       
