@@ -113,7 +113,9 @@ def Volume(request,v_id):
 
 
 def Disclaimer(request):
-    return render(request,'disclaimer.html',{});
+    return render(request,'disclaimer.html',{
+        'nav':'disclaimer'
+    });
 
 
 def ImageFullScreen(request):
