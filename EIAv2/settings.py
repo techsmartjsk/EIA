@@ -29,7 +29,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 SECRET_KEY = '_r5hl^-j%0i4*72yabb)1tkkp$plqg^b=8nyxp*hg5dduhbskt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'https://eiasprintv4.herokuapp.com',
