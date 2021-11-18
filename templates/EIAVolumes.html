@@ -6,11 +6,14 @@
     <div style="float:left;background-color:#ebf0e1;" id="sidebar-left" class="sidebar-container">
         <img id="left_close_sidebar" style="width: 80px;height: 30px;margin: 0 121px 20px 20px;padding: 0 0 0 6px;"src="{% static 'left_button_menu.png' %}">
     {% for i in list %}
-        <div class="sidebar-item st-1 eia_sidebar_item">
         {% if forloop.counter == 1 %}
+        <div class="sidebar-item st-1 eia_sidebar_item {% if nav == 'eia' %}activeVolume{% endif %}">
             <a href="{{ i.link }}" class="sidebar-title">{{ i.heading }}</a>
+        </div>
         {% else %}
-            <a href="{{ i.link }}" target="_blank" class="sidebar-title">{{ i.heading }}</a>
+        <div class="sidebar-item st-1 eia_sidebar_item">
+            <a href="{{ i.link }}" class="sidebar-title">{{ i.heading }}</a>
+        </div>
         {% endif %}
         </div>
     {% endfor %}
@@ -24,7 +27,7 @@
                 <a href="{{ i.link }}" class="sidebar-title activeEIA">0{{ forloop.counter }}.</a>
             </div>
         {% else %}
-            <div class="sidebar-item st-1 sidebar_small eia_sidebar_item {% if nav == 'eia' %}activeVolume{% endif %}">
+            <div class="sidebar-item st-1 sidebar_small eia_sidebar_item">
                 <a href="{{ i.link }}" target="_blank" class="sidebar-title">0{{ forloop.counter }}.</a>
             </div>
         {% endif %}
