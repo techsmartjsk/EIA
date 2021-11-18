@@ -147,7 +147,7 @@ def Chapters(request,title):
     {'id': 5,'heading':'05 : Appendices','link':'https://www.dropbox.com/sh/mqa0ptushfqtc4n/AABqWq3cOXvyG21E6JkoMs1ua?dl=1'}]
 
     context['info'] = EIA_Contents.objects.filter(Heading__contains = title)
-    context['nav'] = 'chapters'
+    context['nav'] = 'eia'
     return render(request,'chapters.html',context)
 
 def ChaptersWithImage(request,title,image_ref):
