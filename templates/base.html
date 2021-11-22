@@ -33,9 +33,9 @@
 </style>
 <body>
 <div style="background-color:#285078; height:240px;">
-    <div style="background-color: white; padding: 30px 22px 30px 23px; max-width:190px; border-radius: 0px 0px 5px 5px; width:190px; height:120px; margin: 0 20px 19px 50px;display:inline-block;">
+    <div style="background-color: white; padding: 35px 11px 15px 10px; max-width:190px; border-radius: 0px 0px 5px 5px; width:190px; height:120px; margin: 0 20px 19px 0px;display:inline-block;">
       <a href="https://www.wkn-group.com/">
-        <img style="height:60px; width:145px;" src="{% static 'wkn-logo.png' %}">
+        <img style="height:70px; width:169px;" src="{% static 'wkn-logo.png' %}">
       </a>
     </div>
     <div style="display:inline-table;">
@@ -65,31 +65,31 @@
     <div id="navigation_bar">
       <ul id="myNavbar" style="display:inline-flex; list-style-type:none;">
         <li class="{% if nav == 'home'%}activeNav{% endif %}">
-          <a style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
+          {% comment %} <a style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br> {% endcomment %}
           <a href="/">
           Home
           </a>
         </li>
         <li id="nts_li" class="{% if nav == 'nts'%}activeNTS{% endif %}">
-          <a href="/maps" style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
+          {% comment %} <a href="/maps" style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br> {% endcomment %}
           <a href="/maps">
           Non Technical Summary
           </a>
         </li>
         <li class="{% if nav == 'eia'%}activeEIA{% endif %}" id="eia_li">
-          <a href="/volumes/1" style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
+          {% comment %} <a href="/volumes/1" style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br> {% endcomment %}
           <a href="/volumes/1">
           EIA Report
           </a>
         </li>
         <li class="{% if nav == 'disclaimer'%}activeNav{% endif %}">
-          <a style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
+          {% comment %} <a style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br> {% endcomment %}
           <a href="/disclaimer">
           Disclaimer
           </a>
         </li>
         <li class="{% if nav == 'contact'%}activeNav{% endif %}">
-        <a style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br>
+        {% comment %} <a style="visibility:hidden;"><img src="{% static 'eia_grey.png' %}" style="width: 41px; height:41px;margin: 7px 9px 7px 0;"></a><br> {% endcomment %}
           <a href="/contact">
           Contact
           </a>
