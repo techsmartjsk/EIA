@@ -2,13 +2,16 @@
 {% load static %}
 
 {% block content %}
-<video id="myVideo" width="100%" autoplay loop muted>
+{% comment %} <video id="myVideo" width="100%" autoplay loop muted>
   <source src="https://www.itpenergised.com/wp-content/uploads/2021/04/iStock-987584318.mp4"></source>
-</video>
+</video> {% endcomment %}
+<img src="{% static 'img/images/background.png' %}">
+</img>
 <div id="Heading">
   <h1 style="color:white !important; font-weight:900; font-size:6vw; padding-left:10px; font-family: 'Lato', sans-serif;">Sallachy Wind Farm</h1>
 </div> 
 <hr style="margin-top:25%; width:60%; margin-left:auto; margin-right: auto; height:3px; background-color:white; color:white;">
+<p style="text-align:center;font-size:3vw;">Environmental Impact Assessment</p>
 {% comment %} <div style="position:absolute;text-align:center; width:100%;">
   <h3 style="color:white !important; font-size:3vw; font-family: 'Lato', sans-serif;">Digital Environmental Assessment</h3>
   <h4 style="color:white !important; font-family: 'Lato', sans-serif;">Produced by ITPEnergised for WKN PNE Group</h4>
@@ -16,8 +19,10 @@
 <div style="margin-top:25%; padding-top:8%; padding-bottom:8%; background-color:#f5faff;">
     {% comment %} <p style="text-align:center;font-size:1.5vw;padding-left:20%; padding-right:20%; font-family: 'Lato', sans-serif;">] Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] </p> {% endcomment %}
     <div style="text-align:center;">
-    <a id="ntsBelow" style="color:#c8c8c8; padding:1rem; border-radius:20px; border: 1px solid #c8c8c8; font-size:1.2vw;" href="/maps">
-          <svg class="icon" width="45" height="45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <a 
+    {% comment %} id="ntsBelow" {% endcomment %}
+    style="color:#c8c8c8; padding:1rem; border-radius:20px; border: 1px solid #c8c8c8; font-size:1.2vw;" href="/maps">
+          {% comment %} <svg class="icon" width="45" height="45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs>
                   <path id="a" d="M0 0h45v45H0z"/>
               </defs>
@@ -30,7 +35,9 @@
                   </g>
                   <path d="M14.836 29.504c3.667-1.251 8.354-3.818 9.725-9.453-2.079 4.097-7.255 7.065-10.356 7.817-.283-10.755 10.745-11.075 14.344-14.181 3.8 16.586-7.762 19.843-13.713 15.817M8.206 22.5c0 7.894 6.4 14.294 14.294 14.294s14.293-6.4 14.293-14.294S30.394 8.207 22.5 8.207c-7.894 0-14.294 6.399-14.294 14.293z" fill="#3282AF"/>
               </g>
-          </svg>Non Technical Summary</a>
+          </svg> {% endcomment %}
+          
+          Non Technical Summary</a>
         <a id="eiaBelow" style="color:#c8c8c8;padding:1rem; border-radius:20px; margin-left: 10px; border: 1px solid #c8c8c8; font-size:1.2vw;" href="/volumes/1">
           <svg class="icon" width="45" height="45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs>
