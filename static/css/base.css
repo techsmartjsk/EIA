@@ -455,7 +455,9 @@ small{
   color: white !important;
 }
 
-
+#navigation_bar{
+  margin-top: 41px;
+}
 
 
 /* 1024 pixels Below */
