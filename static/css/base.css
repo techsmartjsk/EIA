@@ -116,10 +116,8 @@ ul#myNavbar li a:hover{
 }
 
 #Heading{
-    font-weight: 900;
     position:absolute;
     top: 30%;
-    color: white;
     text-align: center;
     width: 100%;
 }
