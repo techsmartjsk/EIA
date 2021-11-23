@@ -469,7 +469,7 @@ small{
 
 /* 1024 pixels Below */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) and (min-width: 600px){
   #navigation_bar{
     display: none;
   }
