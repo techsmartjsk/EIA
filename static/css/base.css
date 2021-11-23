@@ -460,6 +460,10 @@ small{
   ul#menu a{
     font-size: 44px !important;
   }
+
+  #menu li{
+    font-size: 44px !important;
+  }
 }
 
 
