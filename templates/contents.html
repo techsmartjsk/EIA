@@ -64,7 +64,7 @@
                 {{ i.Content | safe }}
         </div>
         <div id="image_content">
-        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:17.5%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
+        <img id="image_collapse" style="width:82px;position:absolute; z-index:999; margin-left:12.5%;margin-top:1.5%;height: 30px;" src="{% static 'left_icon_image.png' %}">
         <form action="/{{ i.types}}" method="POST" target="_blank">
         {% csrf_token %}
             <input name="image" value="{{ i.image }}" hidden>
