@@ -72,7 +72,6 @@ if(document.body.contains(image_collapse)){
     image_collapse.addEventListener("click",function(){
         if(image_content.style.width == '40%'){
             if(document.body.contains(bgimage)){
-                bgimage.style.width = "100%";
                 image_content.style.width = width - 250;
                 image_content.style.marginLeft = "250px";
                 image_content.style.float = "none";
@@ -91,7 +90,7 @@ if(document.body.contains(image_collapse)){
             }
         }else{
             if(document.body.contains(bgimage)){
-                bgimage.style.width = "40%";
+                bgimage.style.minWidth = "40%";
             }
             if(document.body.contains(lvia_sidebar)){
                 lvia_sidebar.style.marginLeft = "60%";
