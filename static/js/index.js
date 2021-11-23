@@ -39,7 +39,7 @@ var styles_nts = {
 }
 
 sidebar.style.height = height;
-sidebar.style.width = width;
+sidebar.style.width = width + 200;
 
 //EIA
 var sidebar_close_button = document.getElementById("left_close_sidebar");
