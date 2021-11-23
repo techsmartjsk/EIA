@@ -59,8 +59,8 @@
     </div>
     {% for i in info %}
         <div id="about"style="float:left;" class="content">
-            <a><img style="width: 22px;height: 29px;padding: 0 1px 4px 3px;"src="{% static 'page_icon.png' %}"><span style="font-size: 14px; margin-left:4px;">Corresponding EIA Report  Chapter<span></a>
-            <h2 style="color:black;font-size:25px; margin-top:15px;">{{ i.Title }}</h2>
+            <a><img style="width: 22px;height: 29px;padding: 0 1px 4px 3px;"src="{% static 'page_icon.png' %}"><span style="font-size: 14px; margin-left:4px;color:#646464;">Corresponding EIA Report  Chapter<span></a>
+            <h2 style="color:#646464;font-size:25px; margin-top:15px;">{{ i.Title }}</h2>
                 {{ i.Content | safe }}
         </div>
         <div id="image_content">

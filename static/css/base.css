@@ -379,6 +379,7 @@ small{
   margin-left: 280px;
   width: 40%;
   padding: 1.5%;
+  color:#646464;
 }
 
 #menu_top{
@@ -491,6 +492,7 @@ small{
   }
   .content{
     margin-left: 70px;
+    color:#646464;
   }
   #about{
     margin-left: 70px;
