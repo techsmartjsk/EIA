@@ -68,7 +68,7 @@
         <form action="/{{ i.types}}" method="POST" target="_blank">
         {% csrf_token %}
             <input name="image" value="{{ i.image }}" hidden>
-            <button type="image" alt="submit" style="width:150px; height:30px; position:absolute; z-index:999; background-color: #fff; border: solid 1px #ebebeb;border-radius: 15px;margin-left:20%;margin-top:1.5%;"><i style="margin-right:4px;"class="fas fa-plus"></i>Open in new tab</button>
+            <button type="image" alt="submit" style="width:150px; height:30px; position:absolute; z-index:999; background-color: #fff; border: solid 1px #ebebeb;border-radius: 15px;margin-left:22%;margin-top:1.5%;"><i style="margin-right:4px;"class="fas fa-plus"></i>Open in new tab</button>
         <form>
             {% if i.types == 'MAP' %}
                 <div class="embed-container">
