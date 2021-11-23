@@ -259,6 +259,7 @@ ul#myNavbar li a:hover{
     object-fit: inherit;
     object-position: 50% 50%;
     position: absolute;
+    min-width: 40%;
 }
 
 #nts{
@@ -370,9 +371,6 @@ small{
   margin-bottom: -15px;
 }
 
-#bgimage{
-  width: 40%;
-}
 
 /* Content */
 .content{
