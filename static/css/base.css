@@ -456,7 +456,15 @@ small{
 
 
 /* Mobile (600 px) */
+@media only screen and (max-width: 480px){
+  ul#menu a{
+    font-size: 44px !important;
+  }
 
+  #menu li{
+    font-size: 44px !important;
+  }
+}
 
 /* 1024 pixels Below */
 
@@ -497,15 +505,6 @@ small{
   }
   #about{
     margin-left: 90px;
-  }
-  @media screen and (max-width: 600px){
-    ul#menu a{
-      font-size: 44px !important;
-    }
-  
-    #menu li{
-      font-size: 44px !important;
-    }
   }
 }
 
