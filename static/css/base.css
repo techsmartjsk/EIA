@@ -468,6 +468,43 @@ small{
     display:block;
     width: 85px;
   }
+  #navigation_bar{
+    display: none;
+  }
+  #smallScreenNav{
+    display:block;
+    width: 65px;
+  }
+  
+  #sidebar-left-small{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 65px;
+    max-width: 65px;
+    background-color: #f5faff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5% 0;
+    border-radius: 2px;
+    z-index: 999;
+    overflow: auto;
+  }
+  #sidebar-left{
+    display: none;
+  }
+  .sidebar_small{
+    width: 35px;
+    height: 40px;
+    text-align: center;
+  }
+  .content{
+    margin-left: 90px;
+    color:#646464;
+  }
+  #about{
+    margin-left: 90px;
+  }
 }
 
 /* 1024 pixels Below */
