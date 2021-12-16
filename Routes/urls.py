@@ -15,5 +15,4 @@ urlpatterns = [
     path('Chapters/<str:title>',views.Chapters,name="Chapters"),
     path('Chapters/<str:title>/<str:image_ref>',views.ChaptersWithImage,name="ChaptersWithImage"),
     path('FullScreen/<str:name>',views.FullScreen,name="FullScreen"),
-    path('loaderio-24e5de954e5362e9a5800406e174dc5b/',views.test,name="test"),
 ]
