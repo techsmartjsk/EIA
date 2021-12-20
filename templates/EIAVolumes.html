@@ -39,8 +39,11 @@
         <hr>
         {% for v in volume_info %}
             <div style="margin-top:10px;">
-                <a><span><a href="{{ v.link }}"style="color:#505050; font-size:22px; text-decoration:none;">{{ forloop.counter }}. {{ v.name }}</a></span>
-                <span style="float:right; color:#646464;font-size:14px; text-decoration:underline;"><span style="margin-left:18em; color:#646464; font-size:14px; text-decoration:underline;">Corresponding NTS Section</span>
+                <a><span><a style="color:#505050; font-size:22px; text-decoration:none;">{{ forloop.counter }}. {{ v.name }}</a></span>
+                <span style="float:right; color:#646464;font-size:14px; text-decoration:underline;">
+                    <span style="margin-left:18em; color:#646464; font-size:14px; text-decoration:underline;">
+                        <a href="{{ v.link }}"style="color:#646464; font-size:14px; text-decoration:none;">Corresponding NTS Section</a>
+                    </span>
                 <span style="margin-left:2em; color:#646464; font-size:14px; text-decoration:underline;">
                     <a href="{{ v.link }}"style="color:#646464; font-size:14px; text-decoration:none;">Download</a></span>
                 <a href="{{ v.link }}">
