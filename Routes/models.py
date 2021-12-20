@@ -11,6 +11,7 @@ class Contents(models.Model):
     Content = models.TextField()
     types = models.CharField(max_length=50,choices=types,default='image')
     image = models.CharField(max_length=250, default="background.png")
+    eia_link = models.CharField(max_length=350, default="link")
 
     def __str__(self):
         return self.Heading
@@ -43,6 +44,7 @@ class ImageReferences(models.Model):
     name = models.CharField(max_length=50)
     image = models.CharField(max_length=250)
     map = models.CharField(max_length=250)
+    eia_link = models.CharField(max_length=350, default="link")
 
     def __str__(self):
         return self.name
