@@ -12,28 +12,27 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 
 import os 
-import django_heroku
-import dj_database_url
+import json
 
 from pathlib import Path
+
+with open('/etc/eia_config.json') as config_file:
+        config = json.load(config_file)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-db_from_env = dj_database_url.config(conn_max_age=500)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_r5hl^-j%0i4*72yabb)1tkkp$plqg^b=8nyxp*hg5dduhbskt'
+SECRET_KEY = config["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://eiasprintv4.herokuapp.com',
-    'localhost'
+    '.netzeroaccelerator.co.uk',
 ]
 
 
@@ -60,7 +59,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'EIAv2.urls'
@@ -94,8 +92,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -138,14 +134,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
 STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-#Activate Django Heroku
-django_heroku.settings(locals())
+
