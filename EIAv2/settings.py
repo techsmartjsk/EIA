@@ -12,12 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 
 import os 
-import json
 
 from pathlib import Path
-
-with open('/etc/eia_config.json') as config_file:
-        config = json.load(config_file)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config["SECRET_KEY"]
+SECRET_KEY = '_r5hl^-j%0i4*72yabb)1tkkp$plqg^b=8nyxp*hg5dduhbskt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -130,9 +126,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 

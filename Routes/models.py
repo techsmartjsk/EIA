@@ -35,6 +35,7 @@ class EIA_Contents(models.Model):
     Content = models.TextField()
     types = models.CharField(max_length=50,choices=types,default='image')
     image = models.CharField(max_length=250, default="background.png")
+    nts_link = models.CharField(default='/none',max_length=250)
 
     def __str__(self):
         return self.Heading
