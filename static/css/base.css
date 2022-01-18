@@ -15,6 +15,10 @@ body{
   position: relative;
 }
 
+#dropdown{
+  font-size: 15px;
+}
+
 #about{
   margin-left: 280px;
 }
