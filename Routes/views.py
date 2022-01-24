@@ -1,6 +1,10 @@
 from Routes.models import Contents, ImageReferences, Volumes, EIA_Contents
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from .forms import UserLogin
+from django.contrib.auth import login as auth_login, authenticate
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def index(request):
     return render(
         request,
@@ -9,6 +13,7 @@ def index(request):
         }
     )
 
+@login_required
 def maps(request):
 
     context={}
@@ -33,12 +38,14 @@ def maps(request):
         'maps.html',context
     )
 
+@login_required
 def about(request):
     return render(
         request,
         'about.html',{}
     )  
 
+@login_required
 def contents(request,title):
     context = {}
     context['titles'] = [
@@ -67,6 +74,7 @@ def contents(request,title):
         'contents.html',context
     )   
 
+@login_required
 def EIA_Content(request,title):
     context = {}
     context['titles'] = [
@@ -93,6 +101,7 @@ def EIA_Content(request,title):
         'contents.html',context
     )  
 
+@login_required
 def Volume(request,v_id):
     context={}
 
@@ -111,32 +120,33 @@ def Volume(request,v_id):
     'EIAVolumes.html',
     context)
 
-
+@login_required
 def Disclaimer(request):
     return render(request,'disclaimer.html',{
         'nav':'disclaimer'
     });
 
-
+@login_required
 def ImageFullScreen(request):
     if request.method == 'POST':
         return render(request,'image_full_screen.html',{
             'id': request.POST['image'],
         })
 
-
+@login_required
 def MapFullScreen(request):
     if request.method == 'POST':
         return render(request,'MapFullScreen.html',{
             'id': request.POST['image'],
         })
 
+@login_required
 def Contact(request):
     return render(request,'contact.html',{
         'nav':'contact',
     })
 
-
+@login_required
 def Chapters(request,title):
     context = {}
 
@@ -150,6 +160,7 @@ def Chapters(request,title):
     context['nav'] = 'eia'
     return render(request,'chapters.html',context)
 
+@login_required
 def ChaptersWithImage(request,title,image_ref):
     context = {}
 
@@ -164,12 +175,35 @@ def ChaptersWithImage(request,title,image_ref):
     context['nav'] = 'chapters'
     return render(request,'chapters_image.html',context)
 
-
+@login_required
 def FullScreen(request,name):
     context = {}
     context['name'] = name
     context['Ref'] = ImageReferences.objects.filter(name__contains = name)
     return render(request,'FullScreen.html',context)
 
+@login_required
 def test(request):
     return render(request,'loaderio-24e5de954e5362e9a5800406e174dc5b.txt',{})
+
+def login(request):
+    next = request.GET.get('next')
+    if request.method == 'POST':
+        form = UserLogin(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+            user = authenticate(username=username, password=password)
+            auth_login(request,user)
+            if next:
+                redirect(next)
+            return redirect('/')
+    else:
+        form = UserLogin()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'login.html', context)
