@@ -178,3 +178,12 @@ var userAgent = navigator.userAgent;
 if(userAgent.match(/chrome|chromium|crios/i)){
     popup.style.display = "none";
 }       
+
+function ShowPassword(){
+    var input = document.getElementById("password");
+    if(input.type == "password"){
+        input.type = "text";
+    }else{
+        input.type = "password";
+    }
+}
